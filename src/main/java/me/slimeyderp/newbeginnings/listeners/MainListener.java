@@ -4,19 +4,14 @@ import io.github.thebusybiscuit.slimefun4.api.events.GEOResourceGenerationEvent;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.resources.MythrilResource;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryClickEvent;
 
 
-import java.io.File;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class MainListener implements Listener {
 
-    //This is for Disabling a certian player's inventory
-    public static Player disableInventory = null;
 
     public MainListener(NewBeginnings plugin) {
         Bukkit.getPluginManager().registerEvents(this, plugin);
@@ -27,21 +22,11 @@ public class MainListener implements Listener {
     // worlds with "THE_END" as Environment.
 
     @EventHandler
-    public void onResourceGeneration(GEOResourceGenerationEvent e){
+    public void onResourceGeneration(GEOResourceGenerationEvent e) {
         if (e.getWorld() == Bukkit.getServer().getWorld("world_the_end") &&
-        e.getResource() instanceof MythrilResource) {
+            e.getResource() instanceof MythrilResource) {
 
             e.setValue(ThreadLocalRandom.current().nextInt(12) + 3);
-        }
-    }
-
-    //Disable a player's inventory
-    @EventHandler
-    public void onItemShuffle(InventoryClickEvent e) {
-        if (disableInventory != null &&
-        e.getClickedInventory().equals(disableInventory.getInventory())) {
-            e.setCancelled(true);
-            disableInventory.sendMessage("You can't do this action right now");
         }
     }
 }
