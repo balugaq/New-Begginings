@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
-  <groupId>me.CHANGEME</groupId>
-  <artifactId>SlimefunAddon</artifactId>
+  <groupId>me.slimeyderp</groupId>
+  <artifactId>NewBeginnings</artifactId>
   <version>1.0.0</version>
   
   <properties>
@@ -51,7 +51,6 @@
   		<version>1.15.2-R0.1-SNAPSHOT</version>
   		<scope>provided</scope>
   	</dependency>
-  	
   	<dependency>
   		<groupId>com.github.TheBusyBiscuit</groupId>
   		<artifactId>CS-CoreLib</artifactId>
@@ -72,7 +71,7 @@
   	<dependency>
   		<groupId>com.github.TheBusyBiscuit</groupId>
   		<artifactId>Slimefun4</artifactId>
-  		<version>master-SNAPSHOT</version>
+  		<version>73401bae08</version>
   		<scope>provided</scope>
   		<exclusions>
   			<exclusion>
