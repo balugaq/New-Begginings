@@ -6,10 +6,9 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AGenerator;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineFuel;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import org.bukkit.Material;
-import org.bukkit.Tag;
 import org.bukkit.inventory.ItemStack;
 
-public abstract class EnderPearlGenerator extends AGenerator {
+public class EnderPearlGenerator extends AGenerator {
 
     public EnderPearlGenerator(Category category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(category, item, recipeType, recipe);

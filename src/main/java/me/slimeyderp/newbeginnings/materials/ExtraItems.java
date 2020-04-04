@@ -6,6 +6,7 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.slimeyderp.newbeginnings.NewCategory;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilChestplate;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
+import me.slimeyderp.newbeginnings.electricity.EnderPearlGenerator;
 
 public class ExtraItems {
 
@@ -55,7 +56,7 @@ public class ExtraItems {
         RecipeType.ARMOR_FORGE,
         ExtraRecipes.MYTHRIL_BOOTS_RECIPE
     );
-    public static final SlimefunItem ENDER_PEARL_GENERATOR = new SlimefunItem(
+    public static final EnderPearlGenerator ENDER_PEARL_GENERATOR = new EnderPearlGenerator(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.ENDER_PEARL_GENERATOR,
         RecipeType.ENHANCED_CRAFTING_TABLE,
