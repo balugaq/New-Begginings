@@ -39,4 +39,9 @@ public class ExtraRecipes {
         SlimefunItems.LEAD_INGOT, null, SlimefunItems.LEAD_INGOT,
         ExtraItemStack.MYTHRIL_STACK, null, ExtraItemStack.MYTHRIL_STACK
     };
+    public static final ItemStack[] MYTHRIL_BLADE_RECIPE = {
+        null, ExtraItemStack.MYTHRIL_STACK, null,
+        null, ExtraItemStack.MYTHRIL_STACK, null,
+        null, SlimefunItems.STAFF_ELEMENTAL, null
+    };
 }

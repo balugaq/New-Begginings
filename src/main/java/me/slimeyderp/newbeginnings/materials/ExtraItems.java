@@ -4,6 +4,7 @@ import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.slimeyderp.newbeginnings.NewCategory;
+import me.slimeyderp.newbeginnings.armor_weapons.MythrilBlade;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilChestplate;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.electricity.EnderPearlGenerator;
@@ -61,6 +62,12 @@ public class ExtraItems {
         ExtraItemStack.ENDER_PEARL_GENERATOR,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final MythrilBlade MYTHRIL_BLADE = new MythrilBlade(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.MYTHRIL_BLADE_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.MYTHRIL_BLADE_RECIPE
     );
 
 

@@ -61,6 +61,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItems.MYTHRIL_CHESTPLATE_ELYTRA.register(this);
         ExtraItems.MYTHRIL_LEGGINGS.register(this);
         ExtraItems.MYTHRIL_BOOTS.register(this);
+        ExtraItems.MYTHRIL_BLADE.register(this);
         ExtraItems.ENDER_PEARL_GENERATOR.register(this);
     }
 

@@ -54,6 +54,12 @@ public class ExtraItemStack {
         "&1Mythril Boots",
         "", "&bStrong enough to resist", "&bnearly any damage."
     );
+    public static final SlimefunItemStack MYTHRIL_BLADE_STACK = new SlimefunItemStack(
+        "MYTHRIL_BLADE",
+        Material.DIAMOND_SWORD,
+        "&1Mythril Sword",
+        "", "&bSharper than a thousand", "&bhellish knives"
+    );
     public static final SlimefunItemStack ENDER_PEARL_GENERATOR = new SlimefunItemStack(
         "ENDER_PEARL_GENERATOR",
         "9343ce58da54c79924a2c9331cfc417fe8ccbbea9be45a7ac85860a6c730",
