@@ -58,7 +58,20 @@ public class ExtraItemStack {
         "MYTHRIL_BLADE",
         Material.DIAMOND_SWORD,
         "&1Mythril Sword",
-        "", "&bSharper than a thousand", "&bhellish knives"
+        "", "&bSharper than a thousand", "&bhellish knives",
+        "&aRIGHT CLICK in your Main Hand", "&a to do an AOE Attack", "&a(20 Seconds Cooldown)"
+    );
+    public static final SlimefunItemStack MYTHRIL_PICKAXE_STACK = new SlimefunItemStack(
+        "MYTHRIL_PICKAXE",
+        Material.DIAMOND_PICKAXE,
+        "&1Mythril Pickaxe",
+        "", "&bStone's nightmare, this", "&btool will demolish anything!"
+    );
+    public static final SlimefunItemStack INFINITE_FIREWORK_STACK = new SlimefunItemStack(
+        "INFINITE_FIREWORK",
+        Material.FIREWORK_ROCKET,
+        "&1Infinite Rocket",
+        "", "&bThis special rocket seems to", "&bnever run out. Use it with an Elytra!"
     );
     public static final SlimefunItemStack ENDER_PEARL_GENERATOR = new SlimefunItemStack(
         "ENDER_PEARL_GENERATOR",

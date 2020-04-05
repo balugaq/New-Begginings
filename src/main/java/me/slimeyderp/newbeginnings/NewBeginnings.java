@@ -62,6 +62,9 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItems.MYTHRIL_LEGGINGS.register(this);
         ExtraItems.MYTHRIL_BOOTS.register(this);
         ExtraItems.MYTHRIL_BLADE.register(this);
+        ExtraItems.MYTHRIL_PICKAXE.register(this);
+        ExtraItems.SHULKER_SHELL.register(this);
+        ExtraItems.INFINITE_FIREWORK.register(this);
         ExtraItems.ENDER_PEARL_GENERATOR.register(this);
     }
 
@@ -92,11 +95,29 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         mythrilLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
         mythrilLeggings.addEnchant(Enchantment.PROTECTION_PROJECTILE, 5, true);
         ExtraItemStack.MYTHRIL_LEGGINGS_STACK.setItemMeta(mythrilLeggings);
+
         ItemMeta mythrilBoots = ExtraItemStack.MYTHRIL_BOOTS_STACK.getItemMeta();
         mythrilBoots.addEnchant(Enchantment.DURABILITY,10,true);
         mythrilBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
         mythrilBoots.addEnchant(Enchantment.PROTECTION_FALL, 5, true);
         mythrilBoots.addEnchant(Enchantment.DEPTH_STRIDER, 3, true);
         ExtraItemStack.MYTHRIL_BOOTS_STACK.setItemMeta(mythrilBoots);
+
+        ItemMeta mythrilBlade = ExtraItemStack.MYTHRIL_BLADE_STACK.getItemMeta();
+        mythrilBlade.addEnchant(Enchantment.DURABILITY,10,true);
+        mythrilBlade.addEnchant(Enchantment.DAMAGE_ALL, 7, true);
+        mythrilBlade.addEnchant(Enchantment.DAMAGE_UNDEAD, 5, true);
+        mythrilBlade.addEnchant(Enchantment.DAMAGE_ARTHROPODS, 3, true);
+        ExtraItemStack.MYTHRIL_BLADE_STACK.setItemMeta(mythrilBlade);
+
+        ItemMeta mythrilPickaxe = ExtraItemStack.MYTHRIL_PICKAXE_STACK.getItemMeta();
+        mythrilPickaxe.addEnchant(Enchantment.DURABILITY,10,true);
+        mythrilPickaxe.addEnchant(Enchantment.DIG_SPEED, 10, true);
+        mythrilPickaxe.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 5, true);
+        ExtraItemStack.MYTHRIL_PICKAXE_STACK.setItemMeta(mythrilPickaxe);
+
+        ItemMeta infiniteFirework = ExtraItemStack.INFINITE_FIREWORK_STACK.getItemMeta();
+        infiniteFirework.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
+        ExtraItemStack.INFINITE_FIREWORK_STACK.setItemMeta(infiniteFirework);
     }
 }

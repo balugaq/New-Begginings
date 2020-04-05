@@ -1,5 +1,6 @@
 package me.slimeyderp.newbeginnings.materials;
 
+import io.github.thebusybiscuit.slimefun4.implementation.items.VanillaItem;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
@@ -8,6 +9,9 @@ import me.slimeyderp.newbeginnings.armor_weapons.MythrilBlade;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilChestplate;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.electricity.EnderPearlGenerator;
+import me.slimeyderp.newbeginnings.tools.InfiniteFirework;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 public class ExtraItems {
 
@@ -68,6 +72,25 @@ public class ExtraItems {
         ExtraItemStack.MYTHRIL_BLADE_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.MYTHRIL_BLADE_RECIPE
+    );
+    public static final NonDisenchantableSlimefunItem MYTHRIL_PICKAXE = new NonDisenchantableSlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.MYTHRIL_PICKAXE_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.MYTHRIL_PICKAXE_RECIPE
+    );
+    public static final VanillaItem SHULKER_SHELL = new VanillaItem(
+        NewCategory.CUSTOM_CATEGORY,
+        new ItemStack(Material.SHULKER_SHELL),
+        "shulker_shell",
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.SHULKER_SHELL_RECIPE
+    );
+    public static final InfiniteFirework INFINITE_FIREWORK = new InfiniteFirework(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.INFINITE_FIREWORK_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.INFINITE_FIREWORK_RECIPE
     );
 
 

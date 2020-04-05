@@ -44,4 +44,19 @@ public class ExtraRecipes {
         null, ExtraItemStack.MYTHRIL_STACK, null,
         null, SlimefunItems.STAFF_ELEMENTAL, null
     };
+    public static final ItemStack[] MYTHRIL_PICKAXE_RECIPE = {
+        ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.MYTHRIL_STACK,
+        null, new ItemStack(Material.STICK), null,
+        null, SlimefunItems.STAFF_ELEMENTAL, null
+    };
+    public static final ItemStack[] SHULKER_SHELL_RECIPE = {
+        ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.ENDER_PEARL), ExtraItemStack.MYTHRIL_STACK,
+        null, new ItemStack(Material.POPPED_CHORUS_FRUIT), null,
+        null, null, null
+    };
+    public static final ItemStack[] INFINITE_FIREWORK_RECIPE = {
+        ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.GUNPOWDER), ExtraItemStack.MYTHRIL_STACK,
+        new ItemStack(Material.PAPER), new ItemStack(Material.FIREWORK_ROCKET), new ItemStack(Material.PAPER),
+        ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.GUNPOWDER), ExtraItemStack.MYTHRIL_STACK
+    };
 }

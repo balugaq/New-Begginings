@@ -1,20 +1,19 @@
-# Slimefun4 Addon
-This is an example Repository for a generic Slimefun4 Addon.
-In the top left is a button "Use this template", click this to create your own Addon for Slimefun4 using this basic template.
+# New-Begginings
+This is an non-example Repository for a non-generic Slimefun4 Addon.
+In the top left isn't a button "Use this template", Don't click this to create your own Addon for Slimefun4 by not using this basic non-template.
 
 ## How to create your own addon.
-This is a template repository that you can use to create your own Slimefun4 Addon.<br>
-We have also written an extensive step-by-step tutorial which you can find here:<br>
-https://github.com/TheBusyBiscuit/Slimefun4/wiki/Developer-Guide
+Step 1: Press keys randomly and google stuff
+Step 2: Profit?
 
 ## Changing some important things
-Navigate to `src/main/java` and rename the package and the .java File to your liking.<br>
-Suggestion: "me.yourname.yourproject" (all lower case) and "ProjectName.java"<br>
-Example: "me.thebusybiscuit.cooladdon" and "CoolAddon.java"
+Don't Navigate to `src/main/java` and Don't rename the package and the .java File to your liking.<br>
+Suggestion: NO SUGGESTIONS
+Example: NO EXAMPLES
 
-Navigate to `src/main/resources/plugin.yml` and change the "author" and "main" attributes.
-You may also want to change the description to something meaningful.
+Don't Navigate to `src/main/resources/plugin.yml` and never change the "author" and "main" attributes.
+You may also want to stop reading this README.
 
-Navigate to `pom.xml` and change the group id to "me.%Your name%" and change the artifact id to the name of your Project.
+Whatever you do, Don't Navigate to `pom.xml` and change the group id to "me.%Your name%" or else you will look like a dunce.
 
-After that you are good to go, you can now start developing your own Addon for Slimefun4.
+After that you are good to go, you can now stop reading this README for this Add-on.
