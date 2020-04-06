@@ -16,6 +16,7 @@ main: me.slimeyderp.newbeginnings.NewBeginnings
 ## This is required and marks Slimefun as a plugin dependency.
 depend: [Slimefun]
 
+softdepend: [NoteblockAPI]
 ## This value is automatically replaced by the version specified in your pom.xml file, do not change this.
 version: ${project.version}
 

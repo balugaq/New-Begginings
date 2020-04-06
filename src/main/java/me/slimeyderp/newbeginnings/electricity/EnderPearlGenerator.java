@@ -24,7 +24,8 @@ public class EnderPearlGenerator extends AGenerator {
 
     @Override
     protected void registerDefaultFuelTypes() {
-        registerFuel(new MachineFuel(4, new ItemStack(Material.ENDER_PEARL)));
+        registerFuel(new MachineFuel(4,
+            new ItemStack(Material.ENDER_PEARL)));
     }
 
     @Override

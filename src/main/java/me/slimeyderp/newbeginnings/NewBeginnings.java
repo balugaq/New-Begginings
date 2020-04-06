@@ -1,5 +1,8 @@
 package me.slimeyderp.newbeginnings;
 
+import com.xxmicloxx.NoteBlockAPI.model.Song;
+import com.xxmicloxx.NoteBlockAPI.songplayer.PositionSongPlayer;
+import com.xxmicloxx.NoteBlockAPI.utils.NBSDecoder;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
@@ -15,8 +18,10 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
     private static NewBeginnings instance;
 
+
     @Override
     public void onEnable() {
+
         instance = this;
 
         //Registering and giving atributtes to the items.

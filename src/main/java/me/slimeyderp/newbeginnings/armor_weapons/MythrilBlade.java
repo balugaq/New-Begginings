@@ -8,6 +8,7 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import org.bukkit.Bukkit;
+import org.bukkit.Color;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Entity;
@@ -23,7 +24,8 @@ import java.util.List;
 
 public class MythrilBlade extends NonDisenchantableSlimefunItem {
 
-    private boolean cooldown = false;
+    private int cooldown = 20;
+    private int task;
 
     public MythrilBlade(Category category, SlimefunItemStack item, RecipeType recipeType,
                         ItemStack[] recipe) {
@@ -37,11 +39,12 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void onItemRightClick(PlayerRightClickEvent e) {
-        if (cooldown) {
-            e.getPlayer().sendMessage("Can't use this ability yet!");
+        if (cooldown < 20) {
+            e.getPlayer().sendMessage("Can't use this ability yet! You need to wait " +
+                cooldown + " seconds.");
             e.cancel();
         } else {
-            cooldown = true;
+            cooldown = 0;
             List<Entity> entities = e.getPlayer().getNearbyEntities(5, 5, 5);
             for (Entity entity : entities) {
                 if (entity instanceof LivingEntity) {
@@ -58,27 +61,43 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
             }
             e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.BLOCK_GRAVEL_BREAK, 1, 1);
             spawnParticles(e.getPlayer());
-            Bukkit.getScheduler().runTaskLater(NewBeginnings.getInstance(),
-                () -> cooldown = false, 400);
+            task = Bukkit.getScheduler().runTaskTimer(NewBeginnings.getInstance(),
+                this::timerCheck, 20, 20).getTaskId();
         }
     }
 
-    private void spawnParticles(Player p){
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(5,0,0), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(-5,0,0), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(0,0,5), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(0,0,-5), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(4,0,4), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(-4,0,-4), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(4,0,-4), 2);
-        p.getWorld().spawnParticle(Particle.BLOCK_CRACK,
-            p.getLocation().add(-4,0,4), 2);
+    private void spawnParticles(Player p) {
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(5, 0, 0), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(-5, 0, 0), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(0, 0, 5), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(0, 0, -5), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(4, 0, 4), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(-4, 0, -4), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(4, 0, -4), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+        p.getWorld().spawnParticle(Particle.REDSTONE,
+            p.getLocation().clone().add(-4, 0, 4), 1,
+            new Particle.DustOptions(Color.GREEN, 2));
+
+    }
+
+    private void timerCheck() {
+        cooldown++;
+        if (cooldown > 19) {
+            Bukkit.getScheduler().cancelTask(task);
+        }
     }
 }

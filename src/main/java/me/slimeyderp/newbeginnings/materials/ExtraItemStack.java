@@ -80,4 +80,10 @@ public class ExtraItemStack {
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
         LoreBuilder.powerBuffer(128), LoreBuilder.powerPerSecond(30)
     );
+    public static final SlimefunItemStack NIGHTMARE_SHARD_STACK = new SlimefunItemStack(
+        "MYTHRIL_BOOTS",
+        Material.QUARTZ,
+        "&8Nightmare Shard",
+        "", "&bA white-pale material that", "&bembodies a hollow substance."
+    );
 }
