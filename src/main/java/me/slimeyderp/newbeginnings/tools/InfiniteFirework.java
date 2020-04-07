@@ -5,8 +5,10 @@ import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.Objects.handlers.ItemUseHandler;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
+import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 
 public class InfiniteFirework extends NonDisenchantableSlimefunItem {
@@ -23,6 +25,7 @@ public class InfiniteFirework extends NonDisenchantableSlimefunItem {
     }
 
     private void onItemRightClick(PlayerRightClickEvent e) {
-        e.getPlayer().getInventory().setItemInMainHand(ExtraItemStack.INFINITE_FIREWORK_STACK);
+        Bukkit.getScheduler().runTaskLater(NewBeginnings.getInstance(),
+            () -> e.getPlayer().getInventory().setItemInMainHand(ExtraItemStack.INFINITE_FIREWORK_STACK), 2);
     }
 }

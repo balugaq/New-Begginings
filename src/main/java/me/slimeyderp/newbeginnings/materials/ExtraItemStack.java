@@ -73,12 +73,19 @@ public class ExtraItemStack {
         "&1Infinite Rocket",
         "", "&bThis special rocket seems to", "&bnever run out. Use it with an Elytra!"
     );
-    public static final SlimefunItemStack ENDER_PEARL_GENERATOR = new SlimefunItemStack(
-        "ENDER_PEARL_GENERATOR",
+    public static final SlimefunItemStack ENDER_PEARL_GENERATOR_1 = new SlimefunItemStack(
+        "ENDER_PEARL_GENERATOR_1",
         "9343ce58da54c79924a2c9331cfc417fe8ccbbea9be45a7ac85860a6c730",
         "&1Ender Pearl Generator",
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
         LoreBuilder.powerBuffer(128), LoreBuilder.powerPerSecond(30)
+    );
+    public static final SlimefunItemStack ENDER_PEARL_GENERATOR_2 = new SlimefunItemStack(
+        "ENDER_PEARL_GENERATOR_2",
+        "9343ce58da54c79924a2c9331cfc417fe8ccbbea9be45a7ac85860a6c730",
+        "&1Ender Pearl Generator &7(&eII&7)",
+        "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
+        LoreBuilder.powerBuffer(256), LoreBuilder.powerPerSecond(64)
     );
     public static final SlimefunItemStack NIGHTMARE_SHARD_STACK = new SlimefunItemStack(
         "MYTHRIL_BOOTS",

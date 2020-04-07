@@ -9,6 +9,7 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -44,10 +45,10 @@ public class MythrilChestplate extends NonDisenchantableSlimefunItem {
         if (p.getItemInHand().getType().equals(Material.AIR)) { pi.setChestplate(null); }
 
         if (hidden) {
-            p.sendMessage("Chestplate Mode Activated");
+            p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated");
             p.setItemInHand(ExtraItemStack.MYTHRIL_CHESTPLATE_STACK);
         } else {
-            p.sendMessage("Elytra Mode Activated");
+            p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated");
             p.setItemInHand(ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK);
         }
     }

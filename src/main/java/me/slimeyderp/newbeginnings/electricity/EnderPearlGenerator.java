@@ -15,11 +15,11 @@ public class EnderPearlGenerator extends AGenerator {
     }
 
     public int getEnergyProduction() {
-        return 15;
+        return 0;
     }
 
     public int getCapacity() {
-        return 128;
+        return 0;
     }
 
     @Override

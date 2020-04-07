@@ -1,8 +1,5 @@
 package me.slimeyderp.newbeginnings;
 
-import com.xxmicloxx.NoteBlockAPI.model.Song;
-import com.xxmicloxx.NoteBlockAPI.songplayer.PositionSongPlayer;
-import com.xxmicloxx.NoteBlockAPI.utils.NBSDecoder;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
@@ -70,7 +67,8 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItems.MYTHRIL_PICKAXE.register(this);
         ExtraItems.SHULKER_SHELL.register(this);
         ExtraItems.INFINITE_FIREWORK.register(this);
-        ExtraItems.ENDER_PEARL_GENERATOR.register(this);
+        ExtraItems.ENDER_PEARL_GENERATOR_1.register(this);
+        ExtraItems.ENDER_PEARL_GENERATOR_2.register(this);
     }
 
     //Enchants the items with their respective enchantments before registering.

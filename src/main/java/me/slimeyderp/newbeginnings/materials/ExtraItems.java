@@ -61,12 +61,30 @@ public class ExtraItems {
         RecipeType.ARMOR_FORGE,
         ExtraRecipes.MYTHRIL_BOOTS_RECIPE
     );
-    public static final EnderPearlGenerator ENDER_PEARL_GENERATOR = new EnderPearlGenerator(
+    public static final EnderPearlGenerator ENDER_PEARL_GENERATOR_1 = new EnderPearlGenerator(
         NewCategory.CUSTOM_CATEGORY,
-        ExtraItemStack.ENDER_PEARL_GENERATOR,
+        ExtraItemStack.ENDER_PEARL_GENERATOR_1,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.EMPTY_RECIPE
-    );
+    ) {
+        @Override
+        public int getEnergyProduction() { return 15; }
+
+        @Override
+        public int getCapacity() { return 128; }
+    };
+    public static final EnderPearlGenerator ENDER_PEARL_GENERATOR_2 = new EnderPearlGenerator(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.ENDER_PEARL_GENERATOR_2,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    ) {
+        @Override
+        public int getEnergyProduction() { return 32; }
+
+        @Override
+        public int getCapacity() { return 256; }
+    };
     public static final MythrilBlade MYTHRIL_BLADE = new MythrilBlade(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.MYTHRIL_BLADE_STACK,

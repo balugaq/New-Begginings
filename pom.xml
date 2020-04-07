@@ -67,11 +67,6 @@
   			</exclusion>
   		</exclusions>
   	</dependency>
-	  <dependency>
-		  <groupId>com.github.koca2000</groupId>
-		  <artifactId>NoteBlockAPI</artifactId>
-		  <version>1.5.0</version>
-	  </dependency>
   	<dependency>
   		<groupId>com.github.TheBusyBiscuit</groupId>
   		<artifactId>Slimefun4</artifactId>
