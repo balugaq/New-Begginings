@@ -44,6 +44,18 @@ public class ExtraRecipes {
         null, ExtraItemStack.MYTHRIL_STACK, null,
         null, SlimefunItems.STAFF_ELEMENTAL, null
     };
+    public static final ItemStack[] ENDERPEARL_GENERATOR_1_RECIPE = {
+        null, new ItemStack(Material.ENDER_PEARL), null,
+        SlimefunItems.HEATING_COIL, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.HEATING_COIL,
+        SlimefunItems.CORINTHIAN_BRONZE_INGOT,
+        new ItemStack(Material.ENDER_EYE), SlimefunItems.CORINTHIAN_BRONZE_INGOT
+    };
+    public static final ItemStack[] ENDERPEARL_GENERATOR_2_RECIPE = {
+        null, new ItemStack(Material.ENDER_EYE), null,
+        ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.ENDER_PEARL_GENERATOR_1, ExtraItemStack.MYTHRIL_STACK,
+        SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.DRAGON_BREATH),
+        SlimefunItems.REINFORCED_ALLOY_INGOT
+    };
     public static final ItemStack[] MYTHRIL_PICKAXE_RECIPE = {
         ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.MYTHRIL_STACK,
         null, new ItemStack(Material.STICK), null,
@@ -59,4 +71,5 @@ public class ExtraRecipes {
         new ItemStack(Material.PAPER), new ItemStack(Material.FIREWORK_ROCKET), new ItemStack(Material.PAPER),
         ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.GUNPOWDER), ExtraItemStack.MYTHRIL_STACK
     };
+
 }

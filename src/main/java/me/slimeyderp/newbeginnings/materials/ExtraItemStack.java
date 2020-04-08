@@ -88,9 +88,15 @@ public class ExtraItemStack {
         LoreBuilder.powerBuffer(256), LoreBuilder.powerPerSecond(64)
     );
     public static final SlimefunItemStack NIGHTMARE_SHARD_STACK = new SlimefunItemStack(
-        "MYTHRIL_BOOTS",
+        "NIGHTMARE_SHARD",
         Material.QUARTZ,
         "&8Nightmare Shard",
         "", "&bA white-pale material that", "&bembodies a hollow substance."
+    );
+    public static final SlimefunItemStack PANDA_BAZOOKA_STACK = new SlimefunItemStack(
+        "PANDA_BAZOOKA",
+        Material.DIAMOND_HOE,
+        "&8Panda Bazooka",
+        "", "&bSay hello to my little friend!"
     );
 }

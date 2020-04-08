@@ -8,6 +8,7 @@ import me.slimeyderp.newbeginnings.NewCategory;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilBlade;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilChestplate;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
+import me.slimeyderp.newbeginnings.armor_weapons.PandaBazooka;
 import me.slimeyderp.newbeginnings.electricity.EnderPearlGenerator;
 import me.slimeyderp.newbeginnings.tools.InfiniteFirework;
 import org.bukkit.Material;
@@ -65,7 +66,7 @@ public class ExtraItems {
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.ENDER_PEARL_GENERATOR_1,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.ENDERPEARL_GENERATOR_1_RECIPE
     ) {
         @Override
         public int getEnergyProduction() { return 15; }
@@ -77,7 +78,7 @@ public class ExtraItems {
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.ENDER_PEARL_GENERATOR_2,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.ENDERPEARL_GENERATOR_2_RECIPE
     ) {
         @Override
         public int getEnergyProduction() { return 32; }
@@ -110,6 +111,16 @@ public class ExtraItems {
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.INFINITE_FIREWORK_RECIPE
     );
-
-
+    public static final SlimefunItem NIGHTMARE_SHARD = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_SHARD_STACK,
+        ExtraRecipetellers.NIGHTMARE_SHARD_RECIPETYPE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final PandaBazooka PANDA_BAZOOKA = new PandaBazooka(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.PANDA_BAZOOKA_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
 }

@@ -40,7 +40,7 @@ public class MainListener implements Listener {
     private static HashMap<UUID, Integer> playerBossParticle = new HashMap<>();
     private static HashMap<UUID, Integer> playerBossSpawn = new HashMap<>();
     private static HashSet<Location> locationHashSet = new HashSet<>();
-    private static int h = 0;
+    private int h = 0;
 
     public MainListener(NewBeginnings plugin) {
         Bukkit.getPluginManager().registerEvents(this, plugin);

@@ -69,6 +69,8 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItems.INFINITE_FIREWORK.register(this);
         ExtraItems.ENDER_PEARL_GENERATOR_1.register(this);
         ExtraItems.ENDER_PEARL_GENERATOR_2.register(this);
+        ExtraItems.NIGHTMARE_SHARD.register(this);
+        ExtraItems.PANDA_BAZOOKA.register(this);
     }
 
     //Enchants the items with their respective enchantments before registering.
