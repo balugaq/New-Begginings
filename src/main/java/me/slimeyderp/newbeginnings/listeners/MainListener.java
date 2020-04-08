@@ -21,11 +21,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.scheduler.BukkitTask;
 
 
 import java.util.Collection;
@@ -37,7 +35,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class MainListener implements Listener {
 
+    public static HashSet<UUID> disableDamageForPlayer = new HashSet<>();
     public static HashMap<UUID,Integer> playerBladeCooldown = new HashMap<>();
+    public static Player dashDamageDisable = null;
     private static HashMap<UUID, Integer> playerBossParticle = new HashMap<>();
     private static HashMap<UUID, Integer> playerBossSpawn = new HashMap<>();
     private static HashSet<Location> locationHashSet = new HashSet<>();
@@ -53,7 +53,7 @@ public class MainListener implements Listener {
         if (e.getWorld() == Bukkit.getServer().getWorld("world_the_end") &&
             e.getResource() instanceof MythrilResource) {
 
-            e.setValue(ThreadLocalRandom.current().nextInt(12) + 3);
+            e.setValue(ThreadLocalRandom.current().nextInt(4));
         }
     }
 
@@ -65,19 +65,24 @@ public class MainListener implements Listener {
             e.getEntity().getCustomName() != null &&
             e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare"))
         { e.setDamage(e.getDamage()*3); }
+
+        if (e.getEntity() instanceof Player &&
+            disableDamageForPlayer.contains(((Player) e.getEntity()).getUniqueId())) {
+            e.setCancelled(true);
+        }
     }
 
     @EventHandler
     public void onEntityDeath(EntityDeathEvent e) {
         if (e.getEntity().getCustomName() != null &&
-            e.getEntity().getCustomName() == (ChatColor.DARK_GRAY + "The Nightmare")) {
+            e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
             e.getDrops().clear();
             e.getDrops().add(new CustomItem((ExtraItemStack.NIGHTMARE_SHARD_STACK),
                 ThreadLocalRandom.current().nextInt(7) + 4 ));
             Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY + "A nightmare has been defeated!");
         }
         if (e.getEntity().getCustomName() != null &&
-        e.getEntity().getCustomName() == (ChatColor.WHITE) + "Panda Bullet!") {
+        e.getEntity().getCustomName().equals((ChatColor.WHITE) + "Panda Bullet!")) {
             e.getDrops().clear();
         }
     }

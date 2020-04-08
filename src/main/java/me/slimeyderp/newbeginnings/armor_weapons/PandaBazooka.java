@@ -71,7 +71,7 @@ public class PandaBazooka extends SlimefunItem {
         Location newLoc = loc.clone().add(direction.getX() * t,
             direction.getY() * t, direction.getZ() * t);
         p.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, newLoc , 0 ,0 ,0 ,0 , 1);
-        newLoc.setY(newLoc.getY() + 0.5);
+        newLoc.setY(newLoc.getY() + 0.75);
         p.teleport(newLoc);
         if (((p.getLocation().getBlock().getType() != Material.AIR &&
             p.getLocation().getBlock().getType() != Material.CAVE_AIR &&

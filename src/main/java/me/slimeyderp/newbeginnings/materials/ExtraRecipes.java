@@ -66,10 +66,20 @@ public class ExtraRecipes {
         null, new ItemStack(Material.POPPED_CHORUS_FRUIT), null,
         null, null, null
     };
+    public static final ItemStack[] RADIANT_SHARD_RECIPE = {
+        ExtraItemStack.NIGHTMARE_SHARD_STACK, ExtraItemStack.MYTHRIL_ORE_STACK, null,
+        null, null, null,
+        null, null, null
+    };
     public static final ItemStack[] INFINITE_FIREWORK_RECIPE = {
         ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.GUNPOWDER), ExtraItemStack.MYTHRIL_STACK,
         new ItemStack(Material.PAPER), new ItemStack(Material.FIREWORK_ROCKET), new ItemStack(Material.PAPER),
         ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.GUNPOWDER), ExtraItemStack.MYTHRIL_STACK
     };
-
+    public static final ItemStack[] PANDA_BAZOOKA_RECIPE = {
+        ExtraItemStack.NIGHTMARE_SHARD_STACK, new ItemStack(Material.BAMBOO), ExtraItemStack.NIGHTMARE_SHARD_STACK,
+        ExtraItemStack.RADIANT_SHARD_STACK, new ItemStack(Material.TNT), ExtraItemStack.RADIANT_SHARD_STACK,
+        ExtraItemStack.NIGHTMARE_SHARD_STACK, ExtraItemStack.RADIANT_SHARD_STACK,
+        ExtraItemStack.NIGHTMARE_SHARD_STACK
+    };
 }

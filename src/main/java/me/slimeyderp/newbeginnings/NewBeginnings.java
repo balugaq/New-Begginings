@@ -70,6 +70,8 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItems.ENDER_PEARL_GENERATOR_1.register(this);
         ExtraItems.ENDER_PEARL_GENERATOR_2.register(this);
         ExtraItems.NIGHTMARE_SHARD.register(this);
+        ExtraItems.RADIANT_SHARD.register(this);
+        ExtraItems.DREAM_NAIL.register(this);
         ExtraItems.PANDA_BAZOOKA.register(this);
     }
 
@@ -114,6 +116,13 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         mythrilBlade.addEnchant(Enchantment.DAMAGE_UNDEAD, 5, true);
         mythrilBlade.addEnchant(Enchantment.DAMAGE_ARTHROPODS, 3, true);
         ExtraItemStack.MYTHRIL_BLADE_STACK.setItemMeta(mythrilBlade);
+
+        ItemMeta dreamNail = ExtraItemStack.DREAM_NAIL_STACK.getItemMeta();
+        dreamNail.addEnchant(Enchantment.DURABILITY,10,true);
+        dreamNail.addEnchant(Enchantment.DAMAGE_ALL, 15, true);
+        dreamNail.addEnchant(Enchantment.DAMAGE_UNDEAD, 10, true);
+        dreamNail.addEnchant(Enchantment.DAMAGE_ARTHROPODS, 5, true);
+        ExtraItemStack.DREAM_NAIL_STACK.setItemMeta(dreamNail);
 
         ItemMeta mythrilPickaxe = ExtraItemStack.MYTHRIL_PICKAXE_STACK.getItemMeta();
         mythrilPickaxe.addEnchant(Enchantment.DURABILITY,10,true);

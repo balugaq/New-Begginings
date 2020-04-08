@@ -93,6 +93,19 @@ public class ExtraItemStack {
         "&8Nightmare Shard",
         "", "&bA white-pale material that", "&bembodies a hollow substance."
     );
+    public static final SlimefunItemStack RADIANT_SHARD_STACK = new SlimefunItemStack(
+        "RADIANT_SHARD",
+        Material.QUARTZ,
+        "&6Radiant Shard",
+        "", "&bA white-pale material that", "&bembodies a radiant substance."
+    );
+    public static final SlimefunItemStack DREAM_NAIL_STACK = new SlimefunItemStack(
+        "DREAM_NAIL",
+        Material.IRON_SWORD,
+        "&6Dream Nail",
+        "", "&bBreach between the dreams", "&band the reality with this weapon.",
+        "&aRIGHT CLICK in your Main Hand", "&a to do Shadow Dash", "&a(5 Seconds Cooldown)"
+    );
     public static final SlimefunItemStack PANDA_BAZOOKA_STACK = new SlimefunItemStack(
         "PANDA_BAZOOKA",
         Material.DIAMOND_HOE,

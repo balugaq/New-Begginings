@@ -5,6 +5,7 @@ import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.slimeyderp.newbeginnings.NewCategory;
+import me.slimeyderp.newbeginnings.armor_weapons.DreamNail;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilBlade;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilChestplate;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
@@ -117,10 +118,22 @@ public class ExtraItems {
         ExtraRecipetellers.NIGHTMARE_SHARD_RECIPETYPE,
         ExtraRecipes.EMPTY_RECIPE
     );
+    public static final SlimefunItem RADIANT_SHARD = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.RADIANT_SHARD_STACK,
+        RecipeType.ORE_WASHER,
+        ExtraRecipes.RADIANT_SHARD_RECIPE
+    );
+    public static final DreamNail DREAM_NAIL = new DreamNail(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.DREAM_NAIL_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
     public static final PandaBazooka PANDA_BAZOOKA = new PandaBazooka(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.PANDA_BAZOOKA_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.PANDA_BAZOOKA_RECIPE
     );
 }

@@ -54,7 +54,7 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
                 if (entity instanceof LivingEntity) {
                     LivingEntity livingEntity = (LivingEntity) entity;
                     if (livingEntity.getHealth() > 10) {
-                        livingEntity.setHealth(livingEntity.getHealth() - 10);
+                        livingEntity.damage(10);
                         livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,
                             200, 2));
                         livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,
