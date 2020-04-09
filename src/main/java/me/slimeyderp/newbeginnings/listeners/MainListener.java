@@ -22,8 +22,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+
 
 
 import java.util.Collection;
@@ -36,8 +35,6 @@ import java.util.concurrent.ThreadLocalRandom;
 public class MainListener implements Listener {
 
     public static HashSet<UUID> disableDamageForPlayer = new HashSet<>();
-    public static HashMap<UUID,Integer> playerBladeCooldown = new HashMap<>();
-    public static Player dashDamageDisable = null;
     private static HashMap<UUID, Integer> playerBossParticle = new HashMap<>();
     private static HashMap<UUID, Integer> playerBossSpawn = new HashMap<>();
     private static HashSet<Location> locationHashSet = new HashSet<>();
@@ -119,14 +116,6 @@ public class MainListener implements Listener {
                 e.cancel();
             }
         }
-    }
-
-    @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent e) { playerBladeCooldown.put(e.getPlayer().getUniqueId(), 20); }
-
-    @EventHandler
-    public void onPlayerLeave(PlayerQuitEvent e) {
-        playerBladeCooldown.remove(e.getPlayer().getUniqueId());
     }
 
     private boolean checkIfRitualExists(Location l) {

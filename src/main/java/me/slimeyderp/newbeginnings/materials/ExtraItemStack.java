@@ -59,7 +59,7 @@ public class ExtraItemStack {
         Material.DIAMOND_SWORD,
         "&1Mythril Sword",
         "", "&bSharper than a thousand", "&bhellish knives",
-        "&aRIGHT CLICK in your Main Hand", "&a to do an AOE Attack", "&a(20 Seconds Cooldown)"
+        "&aRIGHT CLICK in your Main Hand", "&a to do an AOE Attack", "&a(10 Seconds Cooldown)"
     );
     public static final SlimefunItemStack MYTHRIL_PICKAXE_STACK = new SlimefunItemStack(
         "MYTHRIL_PICKAXE",

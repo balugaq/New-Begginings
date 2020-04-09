@@ -7,7 +7,6 @@ import me.mrCookieSlime.Slimefun.Objects.handlers.ItemUseHandler;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 
 import me.slimeyderp.newbeginnings.NewBeginnings;
-import me.slimeyderp.newbeginnings.listeners.MainListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -29,7 +28,8 @@ import java.util.UUID;
 
 public class MythrilBlade extends NonDisenchantableSlimefunItem {
 
-    public static HashMap<UUID, BukkitTask> taskHashMap = new HashMap<>();
+    private static HashMap<UUID, Integer> playerBladeCooldown = new HashMap<>();
+    private static HashMap<UUID, BukkitTask> taskHashMap = new HashMap<>();
 
     public MythrilBlade(Category category, SlimefunItemStack item, RecipeType recipeType,
                         ItemStack[] recipe) {
@@ -43,12 +43,12 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void onItemRightClick(PlayerRightClickEvent e) {
-        if (MainListener.playerBladeCooldown.get(e.getPlayer().getUniqueId()) < 20) {
+        if (playerBladeCooldown.containsKey(e.getPlayer().getUniqueId())) {
             e.getPlayer().sendMessage(ChatColor.RED + "Can't use this ability yet! You need to wait " +
-                (20 - MainListener.playerBladeCooldown.get(e.getPlayer().getUniqueId())) + " seconds.");
+                (playerBladeCooldown.get(e.getPlayer().getUniqueId())) + " seconds.");
             e.cancel();
         } else {
-            MainListener.playerBladeCooldown.replace(e.getPlayer().getUniqueId(), 0);
+            playerBladeCooldown.put(e.getPlayer().getUniqueId(), 10);
             List<Entity> entities = e.getPlayer().getNearbyEntities(5, 5, 5);
             for (Entity entity : entities) {
                 if (entity instanceof LivingEntity) {
@@ -75,37 +75,39 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void spawnParticles(Player p) {
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(5, 1, 0), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(-5, 1, 0), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(0, 1, 5), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(0, 1, -5), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(4, 1, 4), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(-4, 1, -4), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(4, 1, -4), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-        p.getWorld().spawnParticle(Particle.REDSTONE,
-            p.getLocation().clone().add(-4, 1, 4), 1,
-            new Particle.DustOptions(Color.GREEN, 10));
-
+        for (float y = 0 ; y < 5 ; y += 0.5) {
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(5, y, 0), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(-5, y, 0), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(0, y, 5), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(0, y, -5), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(4, y, 4), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(-4, y, -4), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(4, y, -4), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+            p.getWorld().spawnParticle(Particle.REDSTONE,
+                p.getLocation().clone().add(-4, y, 4), 1,
+                new Particle.DustOptions(Color.LIME, 5));
+        }
     }
 
     private void timerCheck(UUID u) {
-        if (MainListener.playerBladeCooldown.get(u) != null) {
-            MainListener.playerBladeCooldown.replace(u, MainListener.playerBladeCooldown.get(u) + 1);
-            if (MainListener.playerBladeCooldown.get(u) > 19) {
+        if (playerBladeCooldown.get(u) != null) {
+            playerBladeCooldown.replace(u, playerBladeCooldown.get(u) - 1);
+            if (playerBladeCooldown.get(u) < 1) {
+                playerBladeCooldown.remove(u);
                 taskHashMap.get(u).cancel();
                 taskHashMap.remove(u);
             }
