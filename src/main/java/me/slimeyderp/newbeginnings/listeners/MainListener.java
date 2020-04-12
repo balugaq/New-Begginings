@@ -13,6 +13,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
@@ -64,52 +65,69 @@ public class MainListener implements Listener {
     }
 
     @EventHandler
-    public void onDamageByEntity(EntityDamageEvent e) {
+    public void onDamageByEntity(EntityDamageByEntityEvent e) {
 
         if (e.getEntity() instanceof Player &&
             disableDamageForPlayer.contains(((Player) e.getEntity()).getUniqueId())) {
             e.setCancelled(true);
         }
 
-        if (e.getEntity().getCustomName() != null &&
-        e.getEntity().getCustomName() == ChatColor.DARK_GRAY + "The Nightmare") {
-
-            Wither nightmare = (Wither) e.getEntity();
-
-            if (ThreadLocalRandom.current().nextInt(21) == 14) {
-                for (byte h = 0; h < ThreadLocalRandom.current().nextInt(5) + 2; h++){
-                    Nightmare.spawnNightmareFollowers(nightmare.getLocation(), 0.25F, "Nightmare Followers");
-                }
+        if (e.getDamager() instanceof Player &&
+        SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getHelmet(),
+            ExtraItemStack.NIGHTMARE_HELMET_STACK, true) &&
+            (SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getChestplate(),
+                ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK, true) ||
+                SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getChestplate(),
+                    ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK, true)) &&
+            SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getLeggings(),
+                ExtraItemStack.NIGHTMARE_LEGGINGS_STACK, true) &&
+            SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getBoots(),
+                ExtraItemStack.NIGHTMARE_BOOTS_STACK, true) &&
+            ((((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.WOODEN_SWORD) ||
+            (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.STONE_SWORD) ||
+        (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.IRON_SWORD) ||
+        (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.GOLDEN_SWORD) ||
+        (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.DIAMOND_SWORD))) {
+            e.setDamage(e.getDamage() + 5);
+            if (e.getEntity() instanceof LivingEntity) {
+                ((LivingEntity) e.getEntity()).addPotionEffect(
+                    new PotionEffect(PotionEffectType.WITHER, 60, 2));
             }
-           if (nightmare.getHealth() < 1028 ) {
-                Nightmare.secondPhaseCreate(e.getEntity().getLocation());
-                nightmare.getWorld().playSound(nightmare.getLocation(), Sound.ENTITY_WITHER_SPAWN, 1, 1);
-                nightmare.remove();
+        } else if (e.getDamager() instanceof Player &&
+            SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getHelmet(),
+                ExtraItemStack.RADIANT_HELMET_STACK, true) &&
+            (SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getChestplate(),
+                ExtraItemStack.RADIANT_CHESTPLATE_STACK, true) ||
+                SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getChestplate(),
+                    ExtraItemStack.RADIANT_CHESTPLATE_ELYTRA_STACK, true)) &&
+            SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getLeggings(),
+                ExtraItemStack.RADIANT_LEGGINGS_STACK, true) &&
+            SlimefunUtils.isItemSimilar(((Player) e.getDamager()).getInventory().getBoots(),
+                ExtraItemStack.RADIANT_BOOTS_STACK, true) &&
+            ((((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.WOODEN_SWORD) ||
+                (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.STONE_SWORD) ||
+                (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.IRON_SWORD) ||
+                (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.GOLDEN_SWORD) ||
+                (((Player) e.getDamager()).getInventory().getItemInMainHand().getType() == Material.DIAMOND_SWORD))) {
+            e.setDamage(e.getDamage() + 5);
+            if (e.getEntity() instanceof LivingEntity) {
+                ((LivingEntity) e.getEntity()).addPotionEffect(
+                    new PotionEffect(PotionEffectType.WEAKNESS, 60, 3));
             }
         }
-
-        if (e.getEntity().getCustomName() != null &&
-            e.getEntity().getCustomName() == ChatColor.BLACK + "The True Nightmare" &&
-            ThreadLocalRandom.current().nextInt(21) == 14) {
-            Wither trueNightmare = (Wither) e.getEntity();
-            for (byte h = 0; h < ThreadLocalRandom.current().nextInt(5) + 2; h++){
-                Nightmare.spawnNightmareFollowers(trueNightmare.getLocation(), 0.45F, "Fiendish Followers");
-            }
-        }
-
     }
 
     @EventHandler
     public void onEntityDeath(EntityDeathEvent e) {
         if (e.getEntity().getCustomName() != null &&
-            e.getEntity().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")) {
+            e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
             e.getDrops().clear();
             e.getDrops().add(new CustomItem((ExtraItemStack.NIGHTMARE_SHARD_STACK),
                 ThreadLocalRandom.current().nextInt(7) + 4 ));
             Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY + "A nightmare has been defeated!");
         }
         if (e.getEntity().getCustomName() != null &&
-        e.getEntity().getCustomName().equals((ChatColor.WHITE) + "Panda Bullet!")) {
+        e.getEntity().getCustomName().equals(ChatColor.WHITE + "PANDAAAAAAA!!!!!!")) {
             e.getDrops().clear();
         }
     }

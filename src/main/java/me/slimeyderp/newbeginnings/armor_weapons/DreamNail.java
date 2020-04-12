@@ -25,10 +25,7 @@ import java.util.UUID;
 public class DreamNail extends SlimefunItem {
 
     public static HashSet<UUID> playerUsing = new HashSet<>();
-    private static HashMap<UUID, Integer> cooldownPlayer = new HashMap<>();
-    double x;
-    double y;
-    double z;
+    public static HashMap<UUID, Integer> cooldownPlayer = new HashMap<>();
     byte cooldownTimer;
 
     public DreamNail(Category category, SlimefunItemStack item, RecipeType recipeType,

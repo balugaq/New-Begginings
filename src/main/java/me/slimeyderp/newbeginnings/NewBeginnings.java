@@ -195,7 +195,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         LeatherArmorMeta nightmareHelmet = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_HELMET_STACK.getItemMeta();
         nightmareHelmet.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 20, true);
+        nightmareHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
         nightmareHelmet.addEnchant(Enchantment.PROTECTION_EXPLOSIONS, 10, true);
         nightmareHelmet.addEnchant(Enchantment.OXYGEN, 10, true);
         nightmareHelmet.addEnchant(Enchantment.WATER_WORKER, 1, true);
@@ -205,17 +205,22 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         LeatherArmorMeta nightmareChestplate = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.getItemMeta();
         nightmareChestplate.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 20, true);
+        nightmareChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
         nightmareChestplate.addEnchant(Enchantment.PROTECTION_FIRE, 10, true);
         nightmareChestplate.setUnbreakable(true);
         nightmareChestplate.setColor(Color.BLACK);
         ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.setItemMeta(nightmareChestplate);
 
-        ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK.setItemMeta(radiantElytraChestplate);
+        ItemMeta nightmareElytraChestplate = ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK.getItemMeta();
+        nightmareElytraChestplate.addEnchant(Enchantment.DURABILITY, 10, true);
+        nightmareElytraChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 15, true);
+        nightmareElytraChestplate.addEnchant(Enchantment.PROTECTION_FIRE, 10, true);
+        nightmareElytraChestplate.setUnbreakable(true);
+        ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK.setItemMeta(nightmareElytraChestplate);
 
         LeatherArmorMeta nightmareLeggings = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_LEGGINGS_STACK.getItemMeta();
         nightmareLeggings.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 20, true);
+        nightmareLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
         nightmareLeggings.addEnchant(Enchantment.PROTECTION_PROJECTILE, 10, true);
         nightmareLeggings.setUnbreakable(true);
         nightmareLeggings.setColor(Color.BLACK);
@@ -223,7 +228,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         LeatherArmorMeta nightmareBoots = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_BOOTS_STACK.getItemMeta();
         nightmareBoots.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 20, true);
+        nightmareBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
         nightmareBoots.addEnchant(Enchantment.PROTECTION_FALL, 10, true);
         nightmareBoots.addEnchant(Enchantment.DEPTH_STRIDER, 3, true);
         nightmareBoots.setUnbreakable(true);

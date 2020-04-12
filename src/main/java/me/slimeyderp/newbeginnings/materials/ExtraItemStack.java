@@ -104,80 +104,70 @@ public class ExtraItemStack {
         Material.GOLDEN_HELMET,
         "&6Radiant Helmet",
         "", "&bShines with the", "&bglare of a thousand suns.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack RADIANT_CHESTPLATE_STACK = new SlimefunItemStack(
         "RADIANT_CHESTPLATE",
         Material.GOLDEN_CHESTPLATE,
         "&6Radiant Chestplate ( Chestplate Mode )",
         "", "&bShines with the", "&bglare of a thousand suns.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack RADIANT_CHESTPLATE_ELYTRA_STACK = new SlimefunItemStack(
         "RADIANT_CHESTPLATE_ELYTRA",
         Material.ELYTRA,
         "&6Radiant Chestplate ( Elytra Mode )",
         "", "&bShines with the", "&bglare of a thousand suns.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack RADIANT_LEGGINGS_STACK = new SlimefunItemStack(
         "RADIANT_LEGGINGS",
         Material.GOLDEN_LEGGINGS,
         "&6Radiant Leggings",
         "", "&bShines with the", "&bglare of a thousand suns.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack RADIANT_BOOTS_STACK = new SlimefunItemStack(
         "RADIANT_BOOTS",
         Material.GOLDEN_BOOTS,
         "&6Radiant Boots",
         "", "&bShines with the", "&bglare of a thousand suns.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_HELMET_STACK = new SlimefunItemStack(
         "NIGHTMARE_HELMET",
         Material.LEATHER_HELMET,
         "&8Nightmare Helmet",
         "", "&bEngulfs all light", "&bnear it's sight.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_CHESTPLATE_STACK = new SlimefunItemStack(
         "NIGHTMARE_CHESTPLATE",
         Material.LEATHER_CHESTPLATE,
         "&6Nightmare Chestplate ( Chestplate Mode )",
         "", "&bEngulfs all light", "&bnear it's sight.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_CHESTPLATE_ELYTRA_STACK = new SlimefunItemStack(
         "NIGHTMARE_CHESTPLATE_ELYTRA",
         Material.ELYTRA,
         "&6Nightmare Chestplate ( Elytra Mode )",
         "", "&bEngulfs all light", "&bnear it's sight.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_LEGGINGS_STACK = new SlimefunItemStack(
         "NIGHTMARE_LEGGINGS",
         Material.LEATHER_LEGGINGS,
         "&6Nightmare Leggings",
         "", "&bEngulfs all light", "&bnear it's sight.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_BOOTS_STACK = new SlimefunItemStack(
         "NIGHTMARE_BOOTS",
         Material.LEATHER_BOOTS,
         "&6Nightmare Boots",
         "", "&bEngulfs all light", "&bnear it's sight.",
-        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
-        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+        "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_SUMMON_STACK = new SlimefunItemStack(
         "NIGHTMARE_SUMMON",
