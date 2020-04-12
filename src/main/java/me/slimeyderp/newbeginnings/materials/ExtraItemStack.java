@@ -73,14 +73,14 @@ public class ExtraItemStack {
         "&1Infinite Rocket",
         "", "&bThis special rocket seems to", "&bnever run out. Use it with an Elytra!"
     );
-    public static final SlimefunItemStack ENDER_PEARL_GENERATOR_1 = new SlimefunItemStack(
+    public static final SlimefunItemStack ENDER_PEARL_GENERATOR_1_STACK = new SlimefunItemStack(
         "ENDER_PEARL_GENERATOR_1",
         "9343ce58da54c79924a2c9331cfc417fe8ccbbea9be45a7ac85860a6c730",
         "&1Ender Pearl Generator",
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
         LoreBuilder.powerBuffer(128), LoreBuilder.powerPerSecond(30)
     );
-    public static final SlimefunItemStack ENDER_PEARL_GENERATOR_2 = new SlimefunItemStack(
+    public static final SlimefunItemStack ENDER_PEARL_GENERATOR_2_STACK = new SlimefunItemStack(
         "ENDER_PEARL_GENERATOR_2",
         "9343ce58da54c79924a2c9331cfc417fe8ccbbea9be45a7ac85860a6c730",
         "&1Ender Pearl Generator &7(&eII&7)",
@@ -98,6 +98,93 @@ public class ExtraItemStack {
         Material.QUARTZ,
         "&6Radiant Shard",
         "", "&bA white-pale material that", "&bembodies a radiant substance."
+    );
+    public static final SlimefunItemStack RADIANT_HELMET_STACK = new SlimefunItemStack(
+        "RADIANT_HELMET",
+        Material.GOLDEN_HELMET,
+        "&6Radiant Helmet",
+        "", "&bShines with the", "&bglare of a thousand suns.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack RADIANT_CHESTPLATE_STACK = new SlimefunItemStack(
+        "RADIANT_CHESTPLATE",
+        Material.GOLDEN_CHESTPLATE,
+        "&6Radiant Chestplate ( Chestplate Mode )",
+        "", "&bShines with the", "&bglare of a thousand suns.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack RADIANT_CHESTPLATE_ELYTRA_STACK = new SlimefunItemStack(
+        "RADIANT_CHESTPLATE_ELYTRA",
+        Material.ELYTRA,
+        "&6Radiant Chestplate ( Elytra Mode )",
+        "", "&bShines with the", "&bglare of a thousand suns.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack RADIANT_LEGGINGS_STACK = new SlimefunItemStack(
+        "RADIANT_LEGGINGS",
+        Material.GOLDEN_LEGGINGS,
+        "&6Radiant Leggings",
+        "", "&bShines with the", "&bglare of a thousand suns.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack RADIANT_BOOTS_STACK = new SlimefunItemStack(
+        "RADIANT_BOOTS",
+        Material.GOLDEN_BOOTS,
+        "&6Radiant Boots",
+        "", "&bShines with the", "&bglare of a thousand suns.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to convert your enemies into", "&ahollow husks of themselves",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack NIGHTMARE_HELMET_STACK = new SlimefunItemStack(
+        "NIGHTMARE_HELMET",
+        Material.LEATHER_HELMET,
+        "&8Nightmare Helmet",
+        "", "&bEngulfs all light", "&bnear it's sight.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack NIGHTMARE_CHESTPLATE_STACK = new SlimefunItemStack(
+        "NIGHTMARE_CHESTPLATE",
+        Material.LEATHER_CHESTPLATE,
+        "&6Nightmare Chestplate ( Chestplate Mode )",
+        "", "&bEngulfs all light", "&bnear it's sight.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack NIGHTMARE_CHESTPLATE_ELYTRA_STACK = new SlimefunItemStack(
+        "NIGHTMARE_CHESTPLATE_ELYTRA",
+        Material.ELYTRA,
+        "&6Nightmare Chestplate ( Elytra Mode )",
+        "", "&bEngulfs all light", "&bnear it's sight.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack NIGHTMARE_LEGGINGS_STACK = new SlimefunItemStack(
+        "NIGHTMARE_LEGGINGS",
+        Material.LEATHER_LEGGINGS,
+        "&6Nightmare Leggings",
+        "", "&bEngulfs all light", "&bnear it's sight.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack NIGHTMARE_BOOTS_STACK = new SlimefunItemStack(
+        "NIGHTMARE_BOOTS",
+        Material.LEATHER_BOOTS,
+        "&6Nightmare Boots",
+        "", "&bEngulfs all light", "&bnear it's sight.",
+        "&aFull armor Bonus: SHIFT-TWICE", "&a to pull your enemies", "&awith the power of your void",
+        "&a(35 Seconds Cooldown)", "&a( If their power is too strong, it will", "&anot have an effect )"
+    );
+    public static final SlimefunItemStack NIGHTMARE_SUMMON_STACK = new SlimefunItemStack(
+        "NIGHTMARE_SUMMON",
+        Material.END_CRYSTAL,
+        "&6The Nightmare",
+        "", "&cWARNING: Creating this item will", "&cspawn a nightmare with power beyond",
+        "&climits. Make this on an open area", "&cand we wish you luck to manage surviving."
     );
     public static final SlimefunItemStack DREAM_NAIL_STACK = new SlimefunItemStack(
         "DREAM_NAIL",

@@ -60,7 +60,7 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
                         livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS,
                             200, 1));
                         livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER,
-                            40, 2));
+                            60, 2));
                     } else {
                         livingEntity.setHealth(0);
                     }

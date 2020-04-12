@@ -1,6 +1,7 @@
 package me.slimeyderp.newbeginnings.materials;
 
 import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
+import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import org.bukkit.Material;
 import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
@@ -52,7 +53,7 @@ public class ExtraRecipes {
     };
     public static final ItemStack[] ENDERPEARL_GENERATOR_2_RECIPE = {
         null, new ItemStack(Material.ENDER_EYE), null,
-        ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.ENDER_PEARL_GENERATOR_1, ExtraItemStack.MYTHRIL_STACK,
+        ExtraItemStack.MYTHRIL_STACK, ExtraItemStack.ENDER_PEARL_GENERATOR_1_STACK, ExtraItemStack.MYTHRIL_STACK,
         SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.DRAGON_BREATH),
         SlimefunItems.REINFORCED_ALLOY_INGOT
     };
@@ -70,6 +71,51 @@ public class ExtraRecipes {
         ExtraItemStack.NIGHTMARE_SHARD_STACK, ExtraItemStack.MYTHRIL_ORE_STACK, null,
         null, null, null,
         null, null, null
+    };
+    public static final ItemStack[] RADIANT_HELMET_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] RADIANT_CHESTPLATE_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] RADIANT_LEGGINGS_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] RADIANT_BOOTS_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] NIGHTMARE_HELMET_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] NIGHTMARE_CHESTPLATE_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] NIGHTMARE_LEGGINGS_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] NIGHTMARE_BOOTS_RECIPE = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+    };
+    public static final ItemStack[] NIGHTMARE_SUMMON_RECIPE = {
+        SlimefunItems.GOLD_24K_BLOCK, ExtraItemStack.MYTHRIL_STACK, SlimefunItems.GOLD_24K_BLOCK,
+        ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.NETHER_STAR), ExtraItemStack.MYTHRIL_STACK,
+        SlimefunItems.GOLD_24K_BLOCK, ExtraItemStack.MYTHRIL_STACK, SlimefunItems.GOLD_24K_BLOCK
     };
     public static final ItemStack[] INFINITE_FIREWORK_RECIPE = {
         ExtraItemStack.MYTHRIL_STACK, new ItemStack(Material.GUNPOWDER), ExtraItemStack.MYTHRIL_STACK,

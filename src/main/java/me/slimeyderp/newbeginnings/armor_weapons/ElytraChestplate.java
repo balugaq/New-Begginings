@@ -15,10 +15,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-public class MythrilChestplate extends NonDisenchantableSlimefunItem {
-    public MythrilChestplate(Category category, SlimefunItemStack item, RecipeType recipeType,
-                             ItemStack[] recipe, boolean hidden) {
+public class ElytraChestplate extends NonDisenchantableSlimefunItem {
+
+    private final ItemStack replace;
+
+    public ElytraChestplate(Category category, SlimefunItemStack item, RecipeType recipeType,
+                            ItemStack[] recipe, boolean hidden, ItemStack replace) {
         super(category, item, recipeType, recipe);
+        this.replace = replace;
         this.hidden = hidden;
     }
 
@@ -30,7 +34,7 @@ public class MythrilChestplate extends NonDisenchantableSlimefunItem {
 
     private void onItemRightClick(PlayerRightClickEvent e) {
         Player player = e.getPlayer();
-        ItemStack item = player.getItemInHand();
+        ItemStack item = player.getInventory().getItemInMainHand();
         if (player.isSneaking()) {
             Bukkit.getScheduler().runTaskLater(NewBeginnings.getInstance(),
                 () -> handleShiftClick(player,item), 2);
@@ -38,18 +42,13 @@ public class MythrilChestplate extends NonDisenchantableSlimefunItem {
     }
 
     private void handleShiftClick(Player p, ItemStack i) {
-        PlayerInventory pi = p.getInventory();
-
         // If the player equipped the chestplate:
 
-        if (p.getItemInHand().getType().equals(Material.AIR)) { pi.setChestplate(null); }
+        if (p.getInventory().getItemInMainHand().getType().equals(Material.AIR)) { p.getInventory().setChestplate(null); }
 
-        if (hidden) {
-            p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated");
-            p.setItemInHand(ExtraItemStack.MYTHRIL_CHESTPLATE_STACK);
-        } else {
-            p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated");
-            p.setItemInHand(ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK);
-        }
+
+        p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated");
+        p.getInventory().setItemInMainHand(replace);
+
     }
 }

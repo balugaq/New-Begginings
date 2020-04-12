@@ -51,9 +51,9 @@ public class DreamNail extends SlimefunItem {
             for (Entity entity : e.getPlayer().getNearbyEntities(5,5,5)) {
                 if (entity instanceof LivingEntity) {
                     ((LivingEntity) entity).addPotionEffect
-                        (new PotionEffect(PotionEffectType.BLINDNESS,20,1));
+                        (new PotionEffect(PotionEffectType.BLINDNESS,40,1));
                     ((LivingEntity) entity).addPotionEffect
-                        (new PotionEffect(PotionEffectType.WITHER,20,5));
+                        (new PotionEffect(PotionEffectType.WITHER,60,5));
                     if (entity instanceof Player) {
                         entity.sendMessage(ChatColor.DARK_GRAY + "The Void passes through you");
                     }

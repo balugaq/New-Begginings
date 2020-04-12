@@ -2,12 +2,11 @@ package me.slimeyderp.newbeginnings.materials;
 
 import io.github.thebusybiscuit.slimefun4.implementation.items.VanillaItem;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.slimeyderp.newbeginnings.NewCategory;
 import me.slimeyderp.newbeginnings.armor_weapons.DreamNail;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilBlade;
-import me.slimeyderp.newbeginnings.armor_weapons.MythrilChestplate;
+import me.slimeyderp.newbeginnings.armor_weapons.ElytraChestplate;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.armor_weapons.PandaBazooka;
 import me.slimeyderp.newbeginnings.electricity.EnderPearlGenerator;
@@ -37,19 +36,21 @@ public class ExtraItems {
         RecipeType.ARMOR_FORGE,
         ExtraRecipes.MYTHRIL_HELMET_RECIPE
     );
-    public static final MythrilChestplate MYTHRIL_CHESTPLATE = new MythrilChestplate(
+    public static final ElytraChestplate MYTHRIL_CHESTPLATE = new ElytraChestplate(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.MYTHRIL_CHESTPLATE_STACK,
         RecipeType.ARMOR_FORGE,
         ExtraRecipes.MYTHRIL_CHESTPLATE_RECIPE,
-        false
+        false,
+        ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK
     );
-    public static final MythrilChestplate MYTHRIL_CHESTPLATE_ELYTRA = new MythrilChestplate(
+    public static final ElytraChestplate MYTHRIL_CHESTPLATE_ELYTRA = new ElytraChestplate(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK,
         RecipeType.NULL,
         ExtraRecipes.EMPTY_RECIPE,
-        true
+        true,
+        ExtraItemStack.MYTHRIL_CHESTPLATE_STACK
     );
     public static final NonDisenchantableSlimefunItem MYTHRIL_LEGGINGS = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
@@ -65,7 +66,7 @@ public class ExtraItems {
     );
     public static final EnderPearlGenerator ENDER_PEARL_GENERATOR_1 = new EnderPearlGenerator(
         NewCategory.CUSTOM_CATEGORY,
-        ExtraItemStack.ENDER_PEARL_GENERATOR_1,
+        ExtraItemStack.ENDER_PEARL_GENERATOR_1_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.ENDERPEARL_GENERATOR_1_RECIPE
     ) {
@@ -77,7 +78,7 @@ public class ExtraItems {
     };
     public static final EnderPearlGenerator ENDER_PEARL_GENERATOR_2 = new EnderPearlGenerator(
         NewCategory.CUSTOM_CATEGORY,
-        ExtraItemStack.ENDER_PEARL_GENERATOR_2,
+        ExtraItemStack.ENDER_PEARL_GENERATOR_2_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.ENDERPEARL_GENERATOR_2_RECIPE
     ) {
@@ -112,6 +113,12 @@ public class ExtraItems {
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.INFINITE_FIREWORK_RECIPE
     );
+    public static final SlimefunItem NIGHTMARE_SUMMON = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_SUMMON_STACK,
+        RecipeType.ANCIENT_ALTAR,
+        ExtraRecipes.NIGHTMARE_SUMMON_RECIPE
+    );
     public static final SlimefunItem NIGHTMARE_SHARD = new SlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.NIGHTMARE_SHARD_STACK,
@@ -123,6 +130,74 @@ public class ExtraItems {
         ExtraItemStack.RADIANT_SHARD_STACK,
         RecipeType.ORE_WASHER,
         ExtraRecipes.RADIANT_SHARD_RECIPE
+    );
+    public static final SlimefunItem RADIANT_HELMET = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.RADIANT_HELMET_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final ElytraChestplate RADIANT_CHESTPLATE = new ElytraChestplate(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.RADIANT_CHESTPLATE_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE,
+        false,
+        ExtraItemStack.RADIANT_CHESTPLATE_ELYTRA_STACK
+    );
+    public static final ElytraChestplate RADIANT_CHESTPLATE_ELYTRA = new ElytraChestplate(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.RADIANT_CHESTPLATE_ELYTRA_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE,
+        true,
+        ExtraItemStack.RADIANT_CHESTPLATE_STACK
+    );
+    public static final SlimefunItem RADIANT_LEGGINGS = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.RADIANT_LEGGINGS_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final SlimefunItem RADIANT_BOOTS = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.RADIANT_BOOTS_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final SlimefunItem NIGHTMARE_HELMET = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_HELMET_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final ElytraChestplate NIGHTMARE_CHESTPLATE = new ElytraChestplate(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE,
+        false,
+        ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK
+    );
+    public static final ElytraChestplate NIGHTMARE_CHESTPLATE_ELYTRA = new ElytraChestplate(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE,
+        true,
+        ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK
+    );
+    public static final SlimefunItem NIGHTMARE_LEGGINGS = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_LEGGINGS_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
+    );
+    public static final SlimefunItem NIGHTMARE_BOOTS = new SlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.NIGHTMARE_BOOTS_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.EMPTY_RECIPE
     );
     public static final DreamNail DREAM_NAIL = new DreamNail(
         NewCategory.CUSTOM_CATEGORY,

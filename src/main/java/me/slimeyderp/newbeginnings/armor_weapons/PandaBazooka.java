@@ -71,7 +71,7 @@ public class PandaBazooka extends SlimefunItem {
         Location newLoc = loc.clone().add(direction.getX() * t,
             direction.getY() * t, direction.getZ() * t);
         p.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, newLoc , 0 ,0 ,0 ,0 , 1);
-        newLoc.setY(newLoc.getY() + 0.75);
+        newLoc.setY(newLoc.getY() + 0.5);
         p.teleport(newLoc);
         if (((p.getLocation().getBlock().getType() != Material.AIR &&
             p.getLocation().getBlock().getType() != Material.CAVE_AIR &&
@@ -80,7 +80,7 @@ public class PandaBazooka extends SlimefunItem {
             p.getLocation().getBlock().getType() != Material.TALL_GRASS) ||
             PandaNearThing(p, player)) ||
         System.currentTimeMillis() > time) {
-            p.getWorld().createExplosion(p.getLocation(), 10, false, false);
+            p.getWorld().createExplosion(p.getLocation(), 6, false, false);
             p.remove();
             int taskID = pandaShootCooldown.get(player.getUniqueId());
             pandaShootCooldown.remove(player.getUniqueId());
