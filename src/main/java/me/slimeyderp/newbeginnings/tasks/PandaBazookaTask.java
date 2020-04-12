@@ -37,7 +37,7 @@ public class PandaBazookaTask implements Runnable {
         t = t + 2.5;
         Location newLoc = loc.clone().add(direction.getX() * t,
             direction.getY() * t, direction.getZ() * t);
-        p.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, newLoc , 0 ,0 ,0 ,0 , 1);
+        p.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, newLoc, 0, 0, 0, 0, 1);
         newLoc.setY(newLoc.getY() + 0.5);
         p.teleport(newLoc);
         if (((p.getLocation().getBlock().getType() != Material.AIR &&
@@ -56,8 +56,8 @@ public class PandaBazookaTask implements Runnable {
     }
 
     private boolean PandaNearThing(Panda pand, Player p) {
-        if (pand.getNearbyEntities(1,1,1).isEmpty()) { return false; }
-        else if (pand.getNearbyEntities(1,1,1).contains(p))
-        { return false; } else { return true; }
+        if (pand.getNearbyEntities(1, 1, 1).isEmpty()) {
+            return false;
+        } else if (pand.getNearbyEntities(1, 1, 1).contains(p)) { return false; } else { return true; }
     }
 }

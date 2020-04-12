@@ -19,12 +19,12 @@ import org.bukkit.util.Vector;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class PandaBazooka extends SlimefunItem {
+public class PandaBazooka extends NonDisenchantableSlimefunItem {
 
     public static HashMap<UUID, Integer> pandaShootCooldown = new HashMap<>();
 
     public PandaBazooka(Category category, SlimefunItemStack item, RecipeType recipeType,
-                                         ItemStack[] recipe) {
+                        ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
     }
 
@@ -41,7 +41,7 @@ public class PandaBazooka extends SlimefunItem {
             e.getPlayer().getWorld().playSound(e.getPlayer().getLocation(),
                 Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1, 1);
             Panda flyingCrapPanda = (Panda) e.getPlayer().getWorld().spawnEntity(e.getPlayer().getLocation()
-                .add(e.getPlayer().getEyeLocation().getDirection().normalize())
+                    .add(e.getPlayer().getEyeLocation().getDirection().normalize())
                 , EntityType.PANDA);
             flyingCrapPanda.setCustomName(ChatColor.WHITE + "PANDAAAAAAA!!!!!!");
             flyingCrapPanda.setCustomNameVisible(true);
@@ -50,7 +50,7 @@ public class PandaBazooka extends SlimefunItem {
             pandaShootCooldown.put(e.getPlayer().getUniqueId(),
                 Bukkit.getScheduler().scheduleSyncRepeatingTask(NewBeginnings.getInstance(), new
                     PandaBazookaTask(flyingCrapPanda, e.getPlayer(), secondsPassed, e.getPlayer().getEyeLocation()
-                , direction), 0 , 0));
+                    , direction), 0, 0));
         }
         e.cancel();
     }

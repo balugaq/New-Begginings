@@ -100,6 +100,12 @@ public class ExtraItems {
         RecipeType.ENHANCED_CRAFTING_TABLE,
         ExtraRecipes.MYTHRIL_PICKAXE_RECIPE
     );
+    public static final NonDisenchantableSlimefunItem MYTHRIL_BOW = new NonDisenchantableSlimefunItem(
+        NewCategory.CUSTOM_CATEGORY,
+        ExtraItemStack.MYTHRIL_BOW_STACK,
+        RecipeType.ENHANCED_CRAFTING_TABLE,
+        ExtraRecipes.MYTHRIL_BOW_RECIPE
+    );
     public static final VanillaItem SHULKER_SHELL = new VanillaItem(
         NewCategory.CUSTOM_CATEGORY,
         new ItemStack(Material.SHULKER_SHELL),
@@ -131,17 +137,17 @@ public class ExtraItems {
         RecipeType.ORE_WASHER,
         ExtraRecipes.RADIANT_SHARD_RECIPE
     );
-    public static final SlimefunItem RADIANT_HELMET = new SlimefunItem(
+    public static final NonDisenchantableSlimefunItem RADIANT_HELMET = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.RADIANT_HELMET_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.RADIANT_HELMET_RECIPE
     );
     public static final ElytraChestplate RADIANT_CHESTPLATE = new ElytraChestplate(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.RADIANT_CHESTPLATE_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE,
+        ExtraRecipes.RADIANT_CHESTPLATE_RECIPE,
         false,
         ExtraItemStack.RADIANT_CHESTPLATE_ELYTRA_STACK
     );
@@ -153,29 +159,29 @@ public class ExtraItems {
         true,
         ExtraItemStack.RADIANT_CHESTPLATE_STACK
     );
-    public static final SlimefunItem RADIANT_LEGGINGS = new SlimefunItem(
+    public static final NonDisenchantableSlimefunItem RADIANT_LEGGINGS = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.RADIANT_LEGGINGS_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.RADIANT_LEGGINGS_RECIPE
     );
-    public static final SlimefunItem RADIANT_BOOTS = new SlimefunItem(
+    public static final NonDisenchantableSlimefunItem RADIANT_BOOTS = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.RADIANT_BOOTS_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.RADIANT_BOOTS_RECIPE
     );
-    public static final SlimefunItem NIGHTMARE_HELMET = new SlimefunItem(
+    public static final NonDisenchantableSlimefunItem NIGHTMARE_HELMET = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.NIGHTMARE_HELMET_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.NIGHTMARE_HELMET_RECIPE
     );
     public static final ElytraChestplate NIGHTMARE_CHESTPLATE = new ElytraChestplate(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE,
+        ExtraRecipes.NIGHTMARE_CHESTPLATE_RECIPE,
         false,
         ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK
     );
@@ -187,23 +193,23 @@ public class ExtraItems {
         true,
         ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK
     );
-    public static final SlimefunItem NIGHTMARE_LEGGINGS = new SlimefunItem(
+    public static final NonDisenchantableSlimefunItem NIGHTMARE_LEGGINGS = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.NIGHTMARE_LEGGINGS_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.NIGHTMARE_LEGGINGS_RECIPE
     );
-    public static final SlimefunItem NIGHTMARE_BOOTS = new SlimefunItem(
+    public static final NonDisenchantableSlimefunItem NIGHTMARE_BOOTS = new NonDisenchantableSlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.NIGHTMARE_BOOTS_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.NIGHTMARE_BOOTS_RECIPE
     );
     public static final DreamNail DREAM_NAIL = new DreamNail(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.DREAM_NAIL_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE
+        ExtraRecipes.DREAM_NAIL_RECIPE
     );
     public static final PandaBazooka PANDA_BAZOOKA = new PandaBazooka(
         NewCategory.CUSTOM_CATEGORY,

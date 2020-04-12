@@ -1,10 +1,12 @@
 package me.slimeyderp.newbeginnings;
 
+import me.mrCookieSlime.Slimefun.Objects.Research;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
 import me.slimeyderp.newbeginnings.resources.MythrilResource;
 import org.bukkit.Color;
+import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
@@ -27,6 +29,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         registerItems();
         enchantItems();
+        registerResearches();
 
         // Calling the listener to kick into action.
         new MainListener(this);
@@ -67,6 +70,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItems.MYTHRIL_BOOTS.register(this);
         ExtraItems.MYTHRIL_BLADE.register(this);
         ExtraItems.MYTHRIL_PICKAXE.register(this);
+        ExtraItems.MYTHRIL_BOW.register(this);
         ExtraItems.SHULKER_SHELL.register(this);
         ExtraItems.INFINITE_FIREWORK.register(this);
         ExtraItems.ENDER_PEARL_GENERATOR_1.register(this);
@@ -92,64 +96,72 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
     private void enchantItems() {
 
         ItemMeta mythrilHelmet = ExtraItemStack.MYTHRIL_HELMET_STACK.getItemMeta();
-        mythrilHelmet.addEnchant(Enchantment.DURABILITY,10,true);
-        mythrilHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
-        mythrilHelmet.addEnchant(Enchantment.PROTECTION_EXPLOSIONS, 5, true);
+        mythrilHelmet.addEnchant(Enchantment.DURABILITY, 10, true);
+        mythrilHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 5, true);
+        mythrilHelmet.addEnchant(Enchantment.PROTECTION_EXPLOSIONS, 4, true);
         mythrilHelmet.addEnchant(Enchantment.OXYGEN, 5, true);
         mythrilHelmet.addEnchant(Enchantment.WATER_WORKER, 1, true);
         mythrilHelmet.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_HELMET_STACK.setItemMeta(mythrilHelmet);
 
         ItemMeta mythrilChestplate = ExtraItemStack.MYTHRIL_CHESTPLATE_STACK.getItemMeta();
-        mythrilChestplate.addEnchant(Enchantment.DURABILITY,10,true);
-        mythrilChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
+        mythrilChestplate.addEnchant(Enchantment.DURABILITY, 10, true);
+        mythrilChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 5, true);
         mythrilChestplate.addEnchant(Enchantment.PROTECTION_FIRE, 5, true);
         mythrilChestplate.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_CHESTPLATE_STACK.setItemMeta(mythrilChestplate);
 
         ItemMeta mythrilChestplateElytra = ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK.getItemMeta();
-        mythrilChestplateElytra.addEnchant(Enchantment.DURABILITY,10,true);
-        mythrilChestplateElytra.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 7, true);
+        mythrilChestplateElytra.addEnchant(Enchantment.DURABILITY, 10, true);
+        mythrilChestplateElytra.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
         mythrilChestplateElytra.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK.setItemMeta(mythrilChestplateElytra);
 
         ItemMeta mythrilLeggings = ExtraItemStack.MYTHRIL_LEGGINGS_STACK.getItemMeta();
-        mythrilLeggings.addEnchant(Enchantment.DURABILITY,10,true);
-        mythrilLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
-        mythrilLeggings.addEnchant(Enchantment.PROTECTION_PROJECTILE, 5, true);
+        mythrilLeggings.addEnchant(Enchantment.DURABILITY, 10, true);
+        mythrilLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 5, true);
+        mythrilLeggings.addEnchant(Enchantment.PROTECTION_PROJECTILE, 4, true);
         mythrilLeggings.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_LEGGINGS_STACK.setItemMeta(mythrilLeggings);
 
         ItemMeta mythrilBoots = ExtraItemStack.MYTHRIL_BOOTS_STACK.getItemMeta();
-        mythrilBoots.addEnchant(Enchantment.DURABILITY,10,true);
-        mythrilBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
-        mythrilBoots.addEnchant(Enchantment.PROTECTION_FALL, 5, true);
+        mythrilBoots.addEnchant(Enchantment.DURABILITY, 10, true);
+        mythrilBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 5, true);
+        mythrilBoots.addEnchant(Enchantment.PROTECTION_FALL, 4, true);
         mythrilBoots.addEnchant(Enchantment.DEPTH_STRIDER, 3, true);
         mythrilBoots.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_BOOTS_STACK.setItemMeta(mythrilBoots);
 
         ItemMeta mythrilBlade = ExtraItemStack.MYTHRIL_BLADE_STACK.getItemMeta();
-        mythrilBlade.addEnchant(Enchantment.DURABILITY,10,true);
+        mythrilBlade.addEnchant(Enchantment.DURABILITY, 10, true);
         mythrilBlade.addEnchant(Enchantment.DAMAGE_ALL, 7, true);
-        mythrilBlade.addEnchant(Enchantment.DAMAGE_UNDEAD, 5, true);
+        mythrilBlade.addEnchant(Enchantment.DAMAGE_UNDEAD, 10, true);
         mythrilBlade.addEnchant(Enchantment.DAMAGE_ARTHROPODS, 3, true);
         mythrilBlade.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_BLADE_STACK.setItemMeta(mythrilBlade);
 
         ItemMeta dreamNail = ExtraItemStack.DREAM_NAIL_STACK.getItemMeta();
-        dreamNail.addEnchant(Enchantment.DURABILITY,10,true);
+        dreamNail.addEnchant(Enchantment.DURABILITY, 10, true);
         dreamNail.addEnchant(Enchantment.DAMAGE_ALL, 15, true);
-        dreamNail.addEnchant(Enchantment.DAMAGE_UNDEAD, 10, true);
+        dreamNail.addEnchant(Enchantment.DAMAGE_UNDEAD, 15, true);
         dreamNail.addEnchant(Enchantment.DAMAGE_ARTHROPODS, 5, true);
         dreamNail.setUnbreakable(true);
         ExtraItemStack.DREAM_NAIL_STACK.setItemMeta(dreamNail);
 
         ItemMeta mythrilPickaxe = ExtraItemStack.MYTHRIL_PICKAXE_STACK.getItemMeta();
-        mythrilPickaxe.addEnchant(Enchantment.DURABILITY,10,true);
+        mythrilPickaxe.addEnchant(Enchantment.DURABILITY, 10, true);
         mythrilPickaxe.addEnchant(Enchantment.DIG_SPEED, 10, true);
         mythrilPickaxe.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 5, true);
         mythrilPickaxe.setUnbreakable(true);
         ExtraItemStack.MYTHRIL_PICKAXE_STACK.setItemMeta(mythrilPickaxe);
+
+        ItemMeta mythrilBow = ExtraItemStack.MYTHRIL_BOW_STACK.getItemMeta();
+        mythrilBow.addEnchant(Enchantment.ARROW_DAMAGE, 7, true);
+        mythrilBow.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
+        mythrilBow.addEnchant(Enchantment.DURABILITY, 10, true);
+        mythrilBow.addEnchant(Enchantment.ARROW_FIRE, 3, true);
+        mythrilBow.setUnbreakable(true);
+        ExtraItemStack.MYTHRIL_BOW_STACK.setItemMeta(mythrilBow);
 
         ItemMeta infiniteFirework = ExtraItemStack.INFINITE_FIREWORK_STACK.getItemMeta();
         infiniteFirework.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
@@ -157,7 +169,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         ItemMeta radiantHelmet = ExtraItemStack.RADIANT_HELMET_STACK.getItemMeta();
         radiantHelmet.addEnchant(Enchantment.DURABILITY, 10, true);
-        radiantHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 15, true);
+        radiantHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         radiantHelmet.addEnchant(Enchantment.PROTECTION_EXPLOSIONS, 10, true);
         radiantHelmet.addEnchant(Enchantment.OXYGEN, 10, true);
         radiantHelmet.addEnchant(Enchantment.WATER_WORKER, 1, true);
@@ -166,7 +178,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         ItemMeta radiantChestplate = ExtraItemStack.RADIANT_CHESTPLATE_STACK.getItemMeta();
         radiantChestplate.addEnchant(Enchantment.DURABILITY, 10, true);
-        radiantChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 15, true);
+        radiantChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         radiantChestplate.addEnchant(Enchantment.PROTECTION_FIRE, 10, true);
         radiantChestplate.setUnbreakable(true);
         ExtraItemStack.RADIANT_CHESTPLATE_STACK.setItemMeta(radiantChestplate);
@@ -180,35 +192,34 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         ItemMeta radiantLeggings = ExtraItemStack.RADIANT_LEGGINGS_STACK.getItemMeta();
         radiantLeggings.addEnchant(Enchantment.DURABILITY, 10, true);
-        radiantLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 15, true);
+        radiantLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         radiantLeggings.addEnchant(Enchantment.PROTECTION_PROJECTILE, 10, true);
         radiantLeggings.setUnbreakable(true);
         ExtraItemStack.RADIANT_LEGGINGS_STACK.setItemMeta(radiantLeggings);
 
         ItemMeta radiantBoots = ExtraItemStack.RADIANT_BOOTS_STACK.getItemMeta();
         radiantBoots.addEnchant(Enchantment.DURABILITY, 10, true);
-        radiantBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 15, true);
+        radiantBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         radiantBoots.addEnchant(Enchantment.PROTECTION_FALL, 10, true);
         radiantBoots.addEnchant(Enchantment.DEPTH_STRIDER, 3, true);
         radiantBoots.setUnbreakable(true);
         ExtraItemStack.RADIANT_BOOTS_STACK.setItemMeta(radiantBoots);
 
-        LeatherArmorMeta nightmareHelmet = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_HELMET_STACK.getItemMeta();
+        ItemMeta nightmareHelmet = ExtraItemStack.NIGHTMARE_HELMET_STACK.getItemMeta();
         nightmareHelmet.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
+        nightmareHelmet.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         nightmareHelmet.addEnchant(Enchantment.PROTECTION_EXPLOSIONS, 10, true);
         nightmareHelmet.addEnchant(Enchantment.OXYGEN, 10, true);
         nightmareHelmet.addEnchant(Enchantment.WATER_WORKER, 1, true);
         nightmareHelmet.setUnbreakable(true);
-        nightmareHelmet.setColor(Color.BLACK);
         ExtraItemStack.NIGHTMARE_HELMET_STACK.setItemMeta(nightmareHelmet);
 
-        LeatherArmorMeta nightmareChestplate = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.getItemMeta();
+        ItemMeta nightmareChestplate =
+            ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.getItemMeta();
         nightmareChestplate.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
+        nightmareChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         nightmareChestplate.addEnchant(Enchantment.PROTECTION_FIRE, 10, true);
         nightmareChestplate.setUnbreakable(true);
-        nightmareChestplate.setColor(Color.BLACK);
         ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.setItemMeta(nightmareChestplate);
 
         ItemMeta nightmareElytraChestplate = ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK.getItemMeta();
@@ -218,22 +229,55 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         nightmareElytraChestplate.setUnbreakable(true);
         ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK.setItemMeta(nightmareElytraChestplate);
 
-        LeatherArmorMeta nightmareLeggings = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_LEGGINGS_STACK.getItemMeta();
+        ItemMeta nightmareLeggings = ExtraItemStack.NIGHTMARE_LEGGINGS_STACK.getItemMeta();
         nightmareLeggings.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
+        nightmareLeggings.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         nightmareLeggings.addEnchant(Enchantment.PROTECTION_PROJECTILE, 10, true);
         nightmareLeggings.setUnbreakable(true);
-        nightmareLeggings.setColor(Color.BLACK);
         ExtraItemStack.NIGHTMARE_LEGGINGS_STACK.setItemMeta(nightmareLeggings);
 
-        LeatherArmorMeta nightmareBoots = (LeatherArmorMeta) ExtraItemStack.NIGHTMARE_BOOTS_STACK.getItemMeta();
+        ItemMeta nightmareBoots = ExtraItemStack.NIGHTMARE_BOOTS_STACK.getItemMeta();
         nightmareBoots.addEnchant(Enchantment.DURABILITY, 10, true);
-        nightmareBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 25, true);
+        nightmareBoots.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         nightmareBoots.addEnchant(Enchantment.PROTECTION_FALL, 10, true);
         nightmareBoots.addEnchant(Enchantment.DEPTH_STRIDER, 3, true);
         nightmareBoots.setUnbreakable(true);
-        nightmareBoots.setColor(Color.BLACK);
         ExtraItemStack.NIGHTMARE_BOOTS_STACK.setItemMeta(nightmareBoots);
 
+    }
+
+    private void registerResearches() {
+        Research MYTHRIL_FORGING_RESEARCH = new Research(new NamespacedKey(this, "mythril_forging"),
+            875094722, "Mythril Forging", 32);
+        MYTHRIL_FORGING_RESEARCH.addItems(
+            ExtraItems.MYTHRIL, ExtraItems.MYTHRIL_ORE, ExtraItems.MYTHRIL_BLADE, ExtraItems.MYTHRIL_HELMET,
+            ExtraItems.MYTHRIL_CHESTPLATE, ExtraItems.MYTHRIL_LEGGINGS, ExtraItems.MYTHRIL_BOOTS,
+            ExtraItems.MYTHRIL_PICKAXE, ExtraItems.MYTHRIL_BOW, ExtraItems.SHULKER_SHELL);
+        MYTHRIL_FORGING_RESEARCH.register();
+
+        Research INFINITE_FIREWORK_RESEARCH = new Research(new NamespacedKey(this, "infinite_firework_research"),
+            775043302, "Infinite Fireworks", 24);
+        INFINITE_FIREWORK_RESEARCH.addItems(ExtraItems.INFINITE_FIREWORK);
+        INFINITE_FIREWORK_RESEARCH.register();
+
+        Research NIGHTMARE_BEINGS_RESEARCH = new Research(new NamespacedKey(this, "nightmare_beings"),
+            949294955, "Nightmare Beings", 35);
+        NIGHTMARE_BEINGS_RESEARCH.addItems(ExtraItems.RADIANT_SHARD, ExtraItems.NIGHTMARE_SHARD,
+            ExtraItems.NIGHTMARE_SUMMON);
+        NIGHTMARE_BEINGS_RESEARCH.register();
+
+        Research END_GAME_EQUIPPEMENT_RESEARCH = new Research(new NamespacedKey(this, "end_game_equippement"),
+            394842349, "End-Game Equippement", 38);
+        END_GAME_EQUIPPEMENT_RESEARCH.addItems(
+            ExtraItems.DREAM_NAIL, ExtraItems.PANDA_BAZOOKA, ExtraItems.NIGHTMARE_BOOTS, ExtraItems.NIGHTMARE_LEGGINGS,
+            ExtraItems.NIGHTMARE_CHESTPLATE, ExtraItems.NIGHTMARE_HELMET, ExtraItems.RADIANT_BOOTS,
+            ExtraItems.RADIANT_LEGGINGS, ExtraItems.RADIANT_CHESTPLATE, ExtraItems.RADIANT_HELMET);
+        END_GAME_EQUIPPEMENT_RESEARCH.register();
+
+        Research ENDER_PEARL_GENERATOR_RESEARCH = new Research(new NamespacedKey(this,
+            "ender_pearl_generator_research"),
+            437465549, "Ender-pearl Energy Generation", 24);
+        ENDER_PEARL_GENERATOR_RESEARCH.addItems(ExtraItems.ENDER_PEARL_GENERATOR_1, ExtraItems.ENDER_PEARL_GENERATOR_2);
+        ENDER_PEARL_GENERATOR_RESEARCH.register();
     }
 }

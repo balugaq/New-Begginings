@@ -75,7 +75,7 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void spawnParticles(Player p) {
-        for (float y = 0 ; y < 5 ; y += 0.5) {
+        for (float y = 0; y < 5; y += 0.5) {
             p.getWorld().spawnParticle(Particle.REDSTONE,
                 p.getLocation().clone().add(5, y, 0), 1,
                 new Particle.DustOptions(Color.LIME, 5));

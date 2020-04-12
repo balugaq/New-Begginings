@@ -67,6 +67,12 @@ public class ExtraItemStack {
         "&1Mythril Pickaxe",
         "", "&bStone's nightmare, this", "&btool will demolish anything!"
     );
+    public static final SlimefunItemStack MYTHRIL_BOW_STACK = new SlimefunItemStack(
+        "MYTHRIL_BOW",
+        Material.BOW,
+        "&1Mythril Bow",
+        "", "&bLegolas would be proud", "&bof this masterpiece! Shoot em down!"
+    );
     public static final SlimefunItemStack INFINITE_FIREWORK_STACK = new SlimefunItemStack(
         "INFINITE_FIREWORK",
         Material.FIREWORK_ROCKET,
@@ -101,14 +107,14 @@ public class ExtraItemStack {
     );
     public static final SlimefunItemStack RADIANT_HELMET_STACK = new SlimefunItemStack(
         "RADIANT_HELMET",
-        Material.GOLDEN_HELMET,
+        Material.DIAMOND_HELMET,
         "&6Radiant Helmet",
         "", "&bShines with the", "&bglare of a thousand suns.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack RADIANT_CHESTPLATE_STACK = new SlimefunItemStack(
         "RADIANT_CHESTPLATE",
-        Material.GOLDEN_CHESTPLATE,
+        Material.DIAMOND_CHESTPLATE,
         "&6Radiant Chestplate ( Chestplate Mode )",
         "", "&bShines with the", "&bglare of a thousand suns.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
@@ -122,57 +128,57 @@ public class ExtraItemStack {
     );
     public static final SlimefunItemStack RADIANT_LEGGINGS_STACK = new SlimefunItemStack(
         "RADIANT_LEGGINGS",
-        Material.GOLDEN_LEGGINGS,
+        Material.DIAMOND_LEGGINGS,
         "&6Radiant Leggings",
         "", "&bShines with the", "&bglare of a thousand suns.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack RADIANT_BOOTS_STACK = new SlimefunItemStack(
         "RADIANT_BOOTS",
-        Material.GOLDEN_BOOTS,
+        Material.DIAMOND_BOOTS,
         "&6Radiant Boots",
         "", "&bShines with the", "&bglare of a thousand suns.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Weakness and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_HELMET_STACK = new SlimefunItemStack(
         "NIGHTMARE_HELMET",
-        Material.LEATHER_HELMET,
+        Material.DIAMOND_HELMET,
         "&8Nightmare Helmet",
         "", "&bEngulfs all light", "&bnear it's sight.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_CHESTPLATE_STACK = new SlimefunItemStack(
         "NIGHTMARE_CHESTPLATE",
-        Material.LEATHER_CHESTPLATE,
-        "&6Nightmare Chestplate ( Chestplate Mode )",
+        Material.DIAMOND_CHESTPLATE,
+        "&8Nightmare Chestplate ( Chestplate Mode )",
         "", "&bEngulfs all light", "&bnear it's sight.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_CHESTPLATE_ELYTRA_STACK = new SlimefunItemStack(
         "NIGHTMARE_CHESTPLATE_ELYTRA",
         Material.ELYTRA,
-        "&6Nightmare Chestplate ( Elytra Mode )",
+        "&8Nightmare Chestplate ( Elytra Mode )",
         "", "&bEngulfs all light", "&bnear it's sight.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_LEGGINGS_STACK = new SlimefunItemStack(
         "NIGHTMARE_LEGGINGS",
-        Material.LEATHER_LEGGINGS,
-        "&6Nightmare Leggings",
+        Material.DIAMOND_LEGGINGS,
+        "&8Nightmare Leggings",
         "", "&bEngulfs all light", "&bnear it's sight.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_BOOTS_STACK = new SlimefunItemStack(
         "NIGHTMARE_BOOTS",
-        Material.LEATHER_BOOTS,
-        "&6Nightmare Boots",
+        Material.DIAMOND_BOOTS,
+        "&8Nightmare Boots",
         "", "&bEngulfs all light", "&bnear it's sight.",
         "&aFull armor Bonus: Any hit with a", "&asword will inflict Wither and +5 extra damage"
     );
     public static final SlimefunItemStack NIGHTMARE_SUMMON_STACK = new SlimefunItemStack(
         "NIGHTMARE_SUMMON",
         Material.END_CRYSTAL,
-        "&6The Nightmare",
+        "&8The Nightmare",
         "", "&cWARNING: Creating this item will", "&cspawn a nightmare with power beyond",
         "&climits. Make this on an open area", "&cand we wish you luck to manage surviving."
     );

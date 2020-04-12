@@ -22,14 +22,14 @@ import java.util.HashSet;
 import java.util.UUID;
 
 
-public class DreamNail extends SlimefunItem {
+public class DreamNail extends NonDisenchantableSlimefunItem {
 
     public static HashSet<UUID> playerUsing = new HashSet<>();
     public static HashMap<UUID, Integer> cooldownPlayer = new HashMap<>();
     byte cooldownTimer;
 
     public DreamNail(Category category, SlimefunItemStack item, RecipeType recipeType,
-                        ItemStack[] recipe) {
+                     ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
     }
 
@@ -45,12 +45,12 @@ public class DreamNail extends SlimefunItem {
                 " seconds before using this ability again");
         } else {
             playerUsing.add(e.getPlayer().getUniqueId());
-            for (Entity entity : e.getPlayer().getNearbyEntities(5,5,5)) {
+            for (Entity entity : e.getPlayer().getNearbyEntities(5, 5, 5)) {
                 if (entity instanceof LivingEntity) {
                     ((LivingEntity) entity).addPotionEffect
-                        (new PotionEffect(PotionEffectType.BLINDNESS,40,1));
+                        (new PotionEffect(PotionEffectType.BLINDNESS, 40, 1));
                     ((LivingEntity) entity).addPotionEffect
-                        (new PotionEffect(PotionEffectType.WITHER,60,5));
+                        (new PotionEffect(PotionEffectType.WITHER, 60, 5));
                     if (entity instanceof Player) {
                         entity.sendMessage(ChatColor.DARK_GRAY + "The Void passes through you");
                     }
@@ -63,7 +63,7 @@ public class DreamNail extends SlimefunItem {
                 () -> FinishDash(e.getPlayer()), 5);
             cooldownPlayer.put(e.getPlayer().getUniqueId(),
                 Bukkit.getScheduler().runTaskTimer(NewBeginnings.getInstance(),
-                () -> Cooldown(e.getPlayer()), 20, 20).getTaskId());
+                    () -> Cooldown(e.getPlayer()), 20, 20).getTaskId());
 
         }
     }

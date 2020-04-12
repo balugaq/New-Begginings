@@ -37,17 +37,19 @@ public class ElytraChestplate extends NonDisenchantableSlimefunItem {
         ItemStack item = player.getInventory().getItemInMainHand();
         if (player.isSneaking()) {
             Bukkit.getScheduler().runTaskLater(NewBeginnings.getInstance(),
-                () -> handleShiftClick(player,item), 2);
+                () -> handleShiftClick(player, item), 2);
         }
     }
 
     private void handleShiftClick(Player p, ItemStack i) {
         // If the player equipped the chestplate:
 
-        if (p.getInventory().getItemInMainHand().getType().equals(Material.AIR)) { p.getInventory().setChestplate(null); }
+        if (p.getInventory().getItemInMainHand().getType().equals(Material.AIR)) {
+            p.getInventory().setChestplate(null);
+        }
 
-
-        p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated");
+        if (replace.getType() == Material.ELYTRA) { p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated"); }
+        else { p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated"); }
         p.getInventory().setItemInMainHand(replace);
 
     }
