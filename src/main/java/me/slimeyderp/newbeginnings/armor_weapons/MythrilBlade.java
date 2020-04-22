@@ -43,9 +43,10 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void onItemRightClick(PlayerRightClickEvent e) {
-        if (playerBladeCooldown.containsKey(e.getPlayer().getUniqueId())) {
+        int seconds = playerBladeCooldown.get(e.getPlayer().getUniqueId());
+        if (seconds != 0) {
             e.getPlayer().sendMessage(ChatColor.RED + "Can't use this ability yet! You need to wait " +
-                (playerBladeCooldown.get(e.getPlayer().getUniqueId())) + " seconds.");
+                seconds + " seconds.");
             e.cancel();
         } else {
             playerBladeCooldown.put(e.getPlayer().getUniqueId(), 10);
@@ -104,13 +105,12 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void timerCheck(UUID u) {
-        if (playerBladeCooldown.get(u) != null) {
-            playerBladeCooldown.replace(u, playerBladeCooldown.get(u) - 1);
-            if (playerBladeCooldown.get(u) < 1) {
-                playerBladeCooldown.remove(u);
-                taskHashMap.get(u).cancel();
-                taskHashMap.remove(u);
-            }
+        int time = playerBladeCooldown.get(u);
+        playerBladeCooldown.replace(u, time - 1);
+        if (time < 1) {
+            playerBladeCooldown.remove(u);
+            taskHashMap.get(u).cancel();
+            taskHashMap.remove(u);
         }
     }
 }
