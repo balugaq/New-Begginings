@@ -10,44 +10,31 @@ import me.slimeyderp.newbeginnings.mobs.Nightmare;
 import me.slimeyderp.newbeginnings.resources.MythrilResource;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Color;
-import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.Particle;
 import org.bukkit.Sound;
-import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Wither;
-import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntityTargetEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
-import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.util.Vector;
 
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class MainListener implements Listener {
 
-    public static HashSet<UUID> disableDamageForPlayer = new HashSet<>();
-    private static HashMap<UUID, Zombie> playerMobList = new HashMap<>();
-    private HashSet<UUID> playerList = new HashSet<>();
-    private static HashMap<UUID, Long> playerSneakTime = new HashMap<>();
-    private static HashMap<UUID, Long> playerSuperCooldown = new HashMap<>();
+    public static final HashSet<UUID> disableDamageForPlayer = new HashSet<>();
 
     public MainListener(NewBeginnings plugin) {
         Bukkit.getPluginManager().registerEvents(this, plugin);
@@ -58,7 +45,7 @@ public class MainListener implements Listener {
     public void onResourceGeneration(GEOResourceGenerationEvent e) {
         if (e.getWorld() == Bukkit.getServer().getWorld("world_the_end") &&
             e.getResource() instanceof MythrilResource) {
-            if (ThreadLocalRandom.current().nextInt(11) == 7) {
+            if (ThreadLocalRandom.current().nextInt(8) == 7) {
                 e.setValue(ThreadLocalRandom.current().nextInt(4));
             }
         }
@@ -66,9 +53,8 @@ public class MainListener implements Listener {
 
     @EventHandler
     public void onDamageByEntity(EntityDamageByEntityEvent e) {
-
         if (e.getEntity() instanceof Player &&
-            disableDamageForPlayer.contains(((Player) e.getEntity()).getUniqueId())) {
+            disableDamageForPlayer.contains(e.getEntity().getUniqueId())) {
             e.setCancelled(true);
         }
 
@@ -136,7 +122,7 @@ public class MainListener implements Listener {
     @EventHandler
     public void onProyectileHitEvent(ProjectileHitEvent e) {
         if (e.getEntity().getType().equals(EntityType.WITHER_SKULL) &&
-            ((Wither) e.getEntity().getShooter()).getCustomName() == ChatColor.DARK_GRAY + "The Nightmare") {
+            ((Wither) e.getEntity().getShooter()).getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
             if (e.getHitEntity() != null) {
                 for (Entity entity : e.getHitEntity().getWorld().getNearbyEntities(e.getHitEntity().getLocation(),
                     3, 3, 3, entity -> entity instanceof LivingEntity)) {
@@ -160,18 +146,18 @@ public class MainListener implements Listener {
     @EventHandler
     public void onEntityTarget(EntityTargetEvent e) {
         if ((e.getEntity().getCustomName() != null &&
-            (e.getEntity().getCustomName() == ChatColor.DARK_GRAY + "The Nightmare" ||
-                e.getEntity().getCustomName() == ChatColor.BLACK + "The True Nightmare") &&
+            (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare") ||
+                e.getEntity().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")) &&
             e.getTarget().getCustomName() != null &&
-            (e.getTarget().getCustomName() == ChatColor.DARK_GRAY + "Nightmare Followers" ||
-                e.getTarget().getCustomName() == ChatColor.DARK_GRAY + "Fiendish Followers"))
+            (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "Nightmare Followers") ||
+                e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "Fiendish Followers")))
             ||
             (e.getEntity().getCustomName() != null &&
-                (e.getEntity().getCustomName() == ChatColor.DARK_GRAY + "Nightmare Followers" ||
-                    e.getEntity().getCustomName() == ChatColor.DARK_GRAY + "Fiendish Followers") &&
+                (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "Nightmare Followers") ||
+                    e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "Fiendish Followers")) &&
                 e.getTarget().getCustomName() != null &&
-                (e.getTarget().getCustomName() == ChatColor.DARK_GRAY + "The Nightmare" ||
-                    e.getTarget().getCustomName() == ChatColor.BLACK + "The True Nightmare"))) {
+                (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare") ||
+                    e.getTarget().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")))) {
             e.setCancelled(true); // Basically, makes the boss not target it's minions and viceversa.
         }
     }
@@ -179,12 +165,12 @@ public class MainListener implements Listener {
     @EventHandler
     public void onAncientAltarCraft(AncientAltarCraftEvent e) {
         if (SlimefunUtils.isItemSimilar(e.getItem(), ExtraItemStack.NIGHTMARE_SUMMON_STACK, true)) {
-            spawnNightmare(e.getAltarBlock().getLocation().clone().add(0, 2, 0), e.getPlayer().getUniqueId());
+            spawnNightmare(e.getAltarBlock().getLocation().clone().add(0, 2, 0));
             e.setCancelled(true);
         }
     }
 
-    private void spawnNightmare(Location l, UUID u) {
+    private void spawnNightmare(Location l) {
         l.getWorld().createExplosion(l, 10);
         l.getWorld().playSound(l,
             Sound.ENTITY_WITHER_AMBIENT, 1, 1);

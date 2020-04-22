@@ -58,6 +58,6 @@ public class PandaBazookaTask implements Runnable {
     private boolean PandaNearThing(Panda pand, Player p) {
         if (pand.getNearbyEntities(1, 1, 1).isEmpty()) {
             return false;
-        } else if (pand.getNearbyEntities(1, 1, 1).contains(p)) { return false; } else { return true; }
+        } else return !pand.getNearbyEntities(1, 1, 1).contains(p);
     }
 }

@@ -21,7 +21,7 @@ import java.util.UUID;
 
 public class PandaBazooka extends NonDisenchantableSlimefunItem {
 
-    public static HashMap<UUID, Integer> pandaShootCooldown = new HashMap<>();
+    public static final HashMap<UUID, Integer> pandaShootCooldown = new HashMap<>();
 
     public PandaBazooka(Category category, SlimefunItemStack item, RecipeType recipeType,
                         ItemStack[] recipe) {

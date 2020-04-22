@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 
 public final class NewCategory {
+
     public static final Category CUSTOM_CATEGORY = new Category(
         new NamespacedKey(NewBeginnings.getInstance(), "new_beginnings"),
         new CustomItem(Material.END_CRYSTAL, "New Beginnings")

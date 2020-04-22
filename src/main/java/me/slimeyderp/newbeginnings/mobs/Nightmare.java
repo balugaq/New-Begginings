@@ -19,10 +19,9 @@ public class Nightmare {
     public static void createNightmare(Location l) {
 
         Wither nightmare = (Wither) l.getWorld().spawnEntity(l, EntityType.WITHER);
-        Attributable nightmareAtributtable = nightmare;
-        nightmareAtributtable.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(2048);
-        nightmareAtributtable.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE).setBaseValue(55);
-        nightmareAtributtable.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(5);
+        nightmare.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(2048);
+        nightmare.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE).setBaseValue(55);
+        nightmare.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(5);
         nightmare.setHealth(2048);
         nightmare.setCustomName(ChatColor.DARK_GRAY + "The Nightmare");
         nightmare.setCustomNameVisible(true);

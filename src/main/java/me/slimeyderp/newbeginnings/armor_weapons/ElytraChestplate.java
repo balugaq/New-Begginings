@@ -48,8 +48,9 @@ public class ElytraChestplate extends NonDisenchantableSlimefunItem {
             p.getInventory().setChestplate(null);
         }
 
-        if (replace.getType() == Material.ELYTRA) { p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated"); }
-        else { p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated"); }
+        if (replace.getType() == Material.ELYTRA) { p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated"); } else {
+            p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated");
+        }
         p.getInventory().setItemInMainHand(replace);
 
     }

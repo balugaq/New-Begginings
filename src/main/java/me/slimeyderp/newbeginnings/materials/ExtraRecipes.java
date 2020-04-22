@@ -17,7 +17,7 @@ public class ExtraRecipes {
     };
     public static final ItemStack[] MYTHRIL_RECIPE = {
         ExtraItemStack.MYTHRIL_ORE_STACK, new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.CHORUS_FRUIT),
-        SlimefunItems.BLISTERING_INGOT_3, null, null,
+        SlimefunItems.ENDER_LUMP_3, null, null,
         null, null, null
     };
     public static final ItemStack[] MYTHRIL_HELMET_RECIPE = {
