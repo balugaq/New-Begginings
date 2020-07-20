@@ -13,13 +13,8 @@
   
   <repositories>
   	<repository>
-  		<id>paper-repo</id>
-  		<url>https://repo.destroystokyo.com/repository/maven-public/</url>
-  	</repository>
-  	
-  	<repository>
   		<id>spigot-repo</id>
-  		<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
   	</repository>
   	
   	<repository>
@@ -45,16 +40,16 @@
   </build>
   
   <dependencies>
-  	<dependency>
-  		<groupId>org.bukkit</groupId>
-  		<artifactId>bukkit</artifactId>
-  		<version>1.15.2-R0.1-SNAPSHOT</version>
-  		<scope>provided</scope>
-  	</dependency>
+	  <dependency>
+		  <groupId>org.spigotmc</groupId>
+		  <artifactId>spigot-api</artifactId>
+		  <version>1.16.1-R0.1-SNAPSHOT</version>
+		  <scope>provided</scope>
+	  </dependency>
   	<dependency>
   		<groupId>com.github.TheBusyBiscuit</groupId>
   		<artifactId>CS-CoreLib</artifactId>
-  		<version>8081bb4fe4</version>
+  		<version>9dd4a1cf8d</version>
   		<scope>provided</scope>
   		<exclusions>
   			<exclusion>
@@ -70,7 +65,7 @@
   	<dependency>
   		<groupId>com.github.TheBusyBiscuit</groupId>
   		<artifactId>Slimefun4</artifactId>
-  		<version>0c96323de9</version>
+  		<version>RC-14</version>
   		<scope>provided</scope>
   		<exclusions>
   			<exclusion>
