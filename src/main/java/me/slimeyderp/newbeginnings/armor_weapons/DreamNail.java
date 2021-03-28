@@ -1,12 +1,9 @@
 package me.slimeyderp.newbeginnings.armor_weapons;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Objects.Category;
-import me.mrCookieSlime.Slimefun.Objects.handlers.ItemUseHandler;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
-import me.slimeyderp.newbeginnings.NewBeginnings;
-import me.slimeyderp.newbeginnings.listeners.MainListener;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
@@ -16,9 +13,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.UUID;
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import me.mrCookieSlime.Slimefun.Lists.RecipeType;
+import me.mrCookieSlime.Slimefun.Objects.Category;
+import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import me.slimeyderp.newbeginnings.NewBeginnings;
+import me.slimeyderp.newbeginnings.listeners.MainListener;
 
 
 public class DreamNail extends NonDisenchantableSlimefunItem {

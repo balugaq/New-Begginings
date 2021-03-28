@@ -1,10 +1,9 @@
 package me.slimeyderp.newbeginnings.materials;
 
-import me.mrCookieSlime.Slimefun.Lists.SlimefunItems;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
+
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 
 public class ExtraRecipes {
 

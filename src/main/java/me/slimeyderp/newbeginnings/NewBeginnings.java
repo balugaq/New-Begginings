@@ -1,18 +1,16 @@
 package me.slimeyderp.newbeginnings;
 
-import me.mrCookieSlime.Slimefun.Objects.Research;
+import org.bukkit.NamespacedKey;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.core.researching.Research;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
 import me.slimeyderp.newbeginnings.resources.MythrilResource;
-import org.bukkit.Color;
-import org.bukkit.NamespacedKey;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.plugin.java.JavaPlugin;
-
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 
 
 public class NewBeginnings extends JavaPlugin implements SlimefunAddon {

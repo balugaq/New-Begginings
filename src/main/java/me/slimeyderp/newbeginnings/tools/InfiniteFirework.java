@@ -1,15 +1,16 @@
 package me.slimeyderp.newbeginnings.tools;
 
+import org.bukkit.Bukkit;
+import org.bukkit.inventory.ItemStack;
+
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
-import me.mrCookieSlime.Slimefun.Objects.handlers.ItemUseHandler;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
-import org.bukkit.Bukkit;
-import org.bukkit.inventory.ItemStack;
 
 public class InfiniteFirework extends NonDisenchantableSlimefunItem {
 

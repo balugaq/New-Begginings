@@ -3,14 +3,9 @@ package me.slimeyderp.newbeginnings.mobs;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.attribute.Attributable;
 import org.bukkit.attribute.Attribute;
-import org.bukkit.entity.Damageable;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Wither;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Nightmare {
 
