@@ -121,6 +121,7 @@ public class MainListener implements Listener {
 
     @EventHandler
     public void onProyectileHitEvent(ProjectileHitEvent e) {
+    	if(e.getEntity() == null) return;
         if (e.getEntity().getType().equals(EntityType.WITHER_SKULL) &&
             ((Wither) e.getEntity().getShooter()).getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
             if (e.getHitEntity() != null) {

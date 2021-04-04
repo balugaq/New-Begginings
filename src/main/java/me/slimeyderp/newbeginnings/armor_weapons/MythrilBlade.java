@@ -42,8 +42,8 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     }
 
     private void onItemRightClick(PlayerRightClickEvent e) {
-        int seconds = playerBladeCooldown.get(e.getPlayer().getUniqueId());
-        if (seconds != 0) {
+        if (playerBladeCooldown.containsKey(e.getPlayer().getUniqueId())) {
+        	int seconds = playerBladeCooldown.get(e.getPlayer().getUniqueId());
             e.getPlayer().sendMessage(ChatColor.RED + "Can't use this ability yet! You need to wait " +
                 seconds + " seconds.");
             e.cancel();

@@ -24,7 +24,7 @@ public class ExtraItems {
         RecipeType.GEO_MINER,
         ExtraRecipes.EMPTY_RECIPE
     );
-    public static final SlimefunItem MYTHRIL = new SlimefunItem(
+    public static final SlimefunItem MYTHRILNEW = new SlimefunItem(
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.MYTHRIL_STACK,
         RecipeType.SMELTERY,
@@ -48,7 +48,7 @@ public class ExtraItems {
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.MYTHRIL_CHESTPLATE_ELYTRA_STACK,
         RecipeType.NULL,
-        ExtraRecipes.EMPTY_RECIPE,
+        ExtraRecipes.ELYTRA_RECIPE,
         true,
         ExtraItemStack.MYTHRIL_CHESTPLATE_STACK
     );
@@ -155,7 +155,7 @@ public class ExtraItems {
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.RADIANT_CHESTPLATE_ELYTRA_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE,
+        ExtraRecipes.ELYTRA_RECIPE,
         true,
         ExtraItemStack.RADIANT_CHESTPLATE_STACK
     );
@@ -189,7 +189,7 @@ public class ExtraItems {
         NewCategory.CUSTOM_CATEGORY,
         ExtraItemStack.NIGHTMARE_CHESTPLATE_ELYTRA_STACK,
         RecipeType.ENHANCED_CRAFTING_TABLE,
-        ExtraRecipes.EMPTY_RECIPE,
+        ExtraRecipes.ELYTRA_RECIPE,
         true,
         ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK
     );

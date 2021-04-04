@@ -17,7 +17,7 @@ public class ExtraItemStack {
         "", "&bIt's been said it's the", "&bstrongest of all metals."
     );
     public static final SlimefunItemStack MYTHRIL_STACK = new SlimefunItemStack(
-        "MYTHRIL",
+        "MYTHRILNEW",
         Material.DIAMOND,
         "&1Mythril",
         "", "&bIt's been said it's the", "&bstrongest of all metals."

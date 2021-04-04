@@ -139,4 +139,9 @@ public class ExtraRecipes {
         ExtraItemStack.NIGHTMARE_SHARD_STACK, ExtraItemStack.RADIANT_SHARD_STACK,
         ExtraItemStack.NIGHTMARE_SHARD_STACK
     };
+    public static final ItemStack[] ELYTRA_RECIPE = {
+    		new ItemStack(Material.ELYTRA), new ItemStack(Material.ELYTRA), new ItemStack(Material.ELYTRA),
+    		new ItemStack(Material.ELYTRA), new ItemStack(Material.ELYTRA), new ItemStack(Material.ELYTRA),
+    		new ItemStack(Material.ELYTRA), new ItemStack(Material.ELYTRA), new ItemStack(Material.ELYTRA)
+        };
 }

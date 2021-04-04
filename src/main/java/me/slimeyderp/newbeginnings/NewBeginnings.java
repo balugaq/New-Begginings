@@ -25,8 +25,8 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         //Registering and giving atributtes to the items.
 
-        registerItems();
         enchantItems();
+        registerItems();
         registerResearches();
 
         // Calling the listener to kick into action.
@@ -60,7 +60,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
     private void registerItems() {
         new MythrilResource().register();
         ExtraItems.MYTHRIL_ORE.register(this);
-        ExtraItems.MYTHRIL.register(this);
+        ExtraItems.MYTHRILNEW.register(this);
         ExtraItems.MYTHRIL_HELMET.register(this);
         ExtraItems.MYTHRIL_CHESTPLATE.register(this);
         ExtraItems.MYTHRIL_CHESTPLATE_ELYTRA.register(this);
@@ -248,7 +248,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         Research MYTHRIL_FORGING_RESEARCH = new Research(new NamespacedKey(this, "mythril_forging"),
             875094722, "Mythril Forging", 32);
         MYTHRIL_FORGING_RESEARCH.addItems(
-            ExtraItems.MYTHRIL, ExtraItems.MYTHRIL_ORE, ExtraItems.MYTHRIL_BLADE, ExtraItems.MYTHRIL_HELMET,
+            ExtraItems.MYTHRILNEW, ExtraItems.MYTHRIL_ORE, ExtraItems.MYTHRIL_BLADE, ExtraItems.MYTHRIL_HELMET,
             ExtraItems.MYTHRIL_CHESTPLATE, ExtraItems.MYTHRIL_LEGGINGS, ExtraItems.MYTHRIL_BOOTS,
             ExtraItems.MYTHRIL_PICKAXE, ExtraItems.MYTHRIL_BOW, ExtraItems.SHULKER_SHELL);
         MYTHRIL_FORGING_RESEARCH.register();
