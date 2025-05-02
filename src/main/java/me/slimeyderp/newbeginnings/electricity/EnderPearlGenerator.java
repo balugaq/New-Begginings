@@ -1,10 +1,10 @@
 package me.slimeyderp.newbeginnings.electricity;
 
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AGenerator;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineFuel;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -25,7 +25,7 @@ public class EnderPearlGenerator extends AGenerator {
     @Override
     protected void registerDefaultFuelTypes() {
         registerFuel(new MachineFuel(4,
-            new ItemStack(Material.ENDER_PEARL)));
+                new ItemStack(Material.ENDER_PEARL)));
     }
 
     @Override

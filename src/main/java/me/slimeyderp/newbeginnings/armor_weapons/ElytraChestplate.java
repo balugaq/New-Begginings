@@ -1,17 +1,16 @@
 package me.slimeyderp.newbeginnings.armor_weapons;
 
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import me.slimeyderp.newbeginnings.NewBeginnings;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import me.slimeyderp.newbeginnings.NewBeginnings;
 
 public class ElytraChestplate extends NonDisenchantableSlimefunItem {
 
@@ -35,7 +34,7 @@ public class ElytraChestplate extends NonDisenchantableSlimefunItem {
         ItemStack item = player.getInventory().getItemInMainHand();
         if (player.isSneaking()) {
             Bukkit.getScheduler().runTaskLater(NewBeginnings.getInstance(),
-                () -> handleShiftClick(player, item), 2);
+                    () -> handleShiftClick(player, item), 2);
         }
     }
 
@@ -46,7 +45,9 @@ public class ElytraChestplate extends NonDisenchantableSlimefunItem {
             p.getInventory().setChestplate(null);
         }
 
-        if (replace.getType() == Material.ELYTRA) { p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated"); } else {
+        if (replace.getType() == Material.ELYTRA) {
+            p.sendMessage(ChatColor.YELLOW + "Elytra Mode Activated");
+        } else {
             p.sendMessage(ChatColor.YELLOW + "Chestplate Mode Activated");
         }
         p.getInventory().setItemInMainHand(replace);

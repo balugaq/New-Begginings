@@ -1,22 +1,24 @@
 package me.slimeyderp.newbeginnings;
 
-import io.github.thebusybiscuit.slimefun4.api.researches.Research;
-import org.bukkit.NamespacedKey;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
 import me.slimeyderp.newbeginnings.resources.MythrilResource;
+import org.bukkit.NamespacedKey;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
     private static NewBeginnings instance;
 
+    public static NewBeginnings getInstance() {
+        return instance;
+    }
 
     @Override
     public void onEnable() {
@@ -50,10 +52,6 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
     @Override
     public JavaPlugin getJavaPlugin() {
         return this;
-    }
-
-    public static NewBeginnings getInstance() {
-        return instance;
     }
 
     // Registers all resources into SF Guide and the Geo-Miner.
@@ -213,7 +211,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         ExtraItemStack.NIGHTMARE_HELMET_STACK.setItemMeta(nightmareHelmet);
 
         ItemMeta nightmareChestplate =
-            ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.getItemMeta();
+                ExtraItemStack.NIGHTMARE_CHESTPLATE_STACK.getItemMeta();
         nightmareChestplate.addEnchant(Enchantment.DURABILITY, 10, true);
         nightmareChestplate.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 10, true);
         nightmareChestplate.addEnchant(Enchantment.PROTECTION_FIRE, 10, true);
@@ -246,35 +244,35 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
     private void registerResearches() {
         Research MYTHRIL_FORGING_RESEARCH = new Research(new NamespacedKey(this, "mythril_forging"),
-            875094722, "Mythril Forging", 32);
+                875094722, "Mythril Forging", 32);
         MYTHRIL_FORGING_RESEARCH.addItems(
-            ExtraItems.MYTHRILNEW, ExtraItems.MYTHRIL_ORE, ExtraItems.MYTHRIL_BLADE, ExtraItems.MYTHRIL_HELMET,
-            ExtraItems.MYTHRIL_CHESTPLATE, ExtraItems.MYTHRIL_LEGGINGS, ExtraItems.MYTHRIL_BOOTS,
-            ExtraItems.MYTHRIL_PICKAXE, ExtraItems.MYTHRIL_BOW, ExtraItems.SHULKER_SHELL);
+                ExtraItems.MYTHRILNEW, ExtraItems.MYTHRIL_ORE, ExtraItems.MYTHRIL_BLADE, ExtraItems.MYTHRIL_HELMET,
+                ExtraItems.MYTHRIL_CHESTPLATE, ExtraItems.MYTHRIL_LEGGINGS, ExtraItems.MYTHRIL_BOOTS,
+                ExtraItems.MYTHRIL_PICKAXE, ExtraItems.MYTHRIL_BOW, ExtraItems.SHULKER_SHELL);
         MYTHRIL_FORGING_RESEARCH.register();
 
         Research INFINITE_FIREWORK_RESEARCH = new Research(new NamespacedKey(this, "infinite_firework_research"),
-            775043302, "Infinite Fireworks", 24);
+                775043302, "Infinite Fireworks", 24);
         INFINITE_FIREWORK_RESEARCH.addItems(ExtraItems.INFINITE_FIREWORK);
         INFINITE_FIREWORK_RESEARCH.register();
 
         Research NIGHTMARE_BEINGS_RESEARCH = new Research(new NamespacedKey(this, "nightmare_beings"),
-            949294955, "Nightmare Beings", 35);
+                949294955, "Nightmare Beings", 35);
         NIGHTMARE_BEINGS_RESEARCH.addItems(ExtraItems.RADIANT_SHARD, ExtraItems.NIGHTMARE_SHARD,
-            ExtraItems.NIGHTMARE_SUMMON);
+                ExtraItems.NIGHTMARE_SUMMON);
         NIGHTMARE_BEINGS_RESEARCH.register();
 
         Research END_GAME_EQUIPPEMENT_RESEARCH = new Research(new NamespacedKey(this, "end_game_equippement"),
-            394842349, "End-Game Equippement", 38);
+                394842349, "End-Game Equippement", 38);
         END_GAME_EQUIPPEMENT_RESEARCH.addItems(
-            ExtraItems.DREAM_NAIL, ExtraItems.PANDA_BAZOOKA, ExtraItems.NIGHTMARE_BOOTS, ExtraItems.NIGHTMARE_LEGGINGS,
-            ExtraItems.NIGHTMARE_CHESTPLATE, ExtraItems.NIGHTMARE_HELMET, ExtraItems.RADIANT_BOOTS,
-            ExtraItems.RADIANT_LEGGINGS, ExtraItems.RADIANT_CHESTPLATE, ExtraItems.RADIANT_HELMET);
+                ExtraItems.DREAM_NAIL, ExtraItems.PANDA_BAZOOKA, ExtraItems.NIGHTMARE_BOOTS, ExtraItems.NIGHTMARE_LEGGINGS,
+                ExtraItems.NIGHTMARE_CHESTPLATE, ExtraItems.NIGHTMARE_HELMET, ExtraItems.RADIANT_BOOTS,
+                ExtraItems.RADIANT_LEGGINGS, ExtraItems.RADIANT_CHESTPLATE, ExtraItems.RADIANT_HELMET);
         END_GAME_EQUIPPEMENT_RESEARCH.register();
 
         Research ENDER_PEARL_GENERATOR_RESEARCH = new Research(new NamespacedKey(this,
-            "ender_pearl_generator_research"),
-            437465549, "Ender-pearl Energy Generation", 24);
+                "ender_pearl_generator_research"),
+                437465549, "Ender-pearl Energy Generation", 24);
         ENDER_PEARL_GENERATOR_RESEARCH.addItems(ExtraItems.ENDER_PEARL_GENERATOR_1, ExtraItems.ENDER_PEARL_GENERATOR_2);
         ENDER_PEARL_GENERATOR_RESEARCH.register();
     }
