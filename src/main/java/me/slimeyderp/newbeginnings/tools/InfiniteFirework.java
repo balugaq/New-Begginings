@@ -5,16 +5,16 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Objects.Category;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 
 public class InfiniteFirework extends NonDisenchantableSlimefunItem {
 
-    public InfiniteFirework(Category category, SlimefunItemStack item, RecipeType recipeType,
+    public InfiniteFirework(ItemGroup category, SlimefunItemStack item, RecipeType recipeType,
                             ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
     }

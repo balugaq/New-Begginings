@@ -13,9 +13,9 @@ import org.bukkit.util.Vector;
 
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Objects.Category;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.tasks.PandaBazookaTask;
 
@@ -23,7 +23,7 @@ public class PandaBazooka extends NonDisenchantableSlimefunItem {
 
     public static final HashMap<UUID, Integer> pandaShootCooldown = new HashMap<>();
 
-    public PandaBazooka(Category category, SlimefunItemStack item, RecipeType recipeType,
+    public PandaBazooka(ItemGroup category, SlimefunItemStack item, RecipeType recipeType,
                         ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
     }

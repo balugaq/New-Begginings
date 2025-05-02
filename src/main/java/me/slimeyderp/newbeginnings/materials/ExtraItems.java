@@ -1,8 +1,8 @@
 package me.slimeyderp.newbeginnings.materials;
 
 import io.github.thebusybiscuit.slimefun4.implementation.items.VanillaItem;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import me.slimeyderp.newbeginnings.NewCategory;
 import me.slimeyderp.newbeginnings.armor_weapons.DreamNail;
 import me.slimeyderp.newbeginnings.armor_weapons.MythrilBlade;

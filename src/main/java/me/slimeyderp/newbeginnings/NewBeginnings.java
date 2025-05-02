@@ -1,12 +1,12 @@
 package me.slimeyderp.newbeginnings;
 
+import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.core.researching.Research;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
@@ -44,7 +44,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/SlimeyDerp/New-Begginings/issues";
+        return "https://github.com/balugaq/New-Begginings/issues";
     }
 
     @Override

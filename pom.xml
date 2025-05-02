@@ -63,9 +63,9 @@
   		</exclusions>
   	</dependency>
   	<dependency>
-  		<groupId>com.github.TheBusyBiscuit</groupId>
+  		<groupId>com.github.SlimefunGuguProject</groupId>
   		<artifactId>Slimefun4</artifactId>
-  		<version>RC-21</version>
+  		<version>38953fe13a</version>
   		<scope>provided</scope>
   		<exclusions>
   			<exclusion>

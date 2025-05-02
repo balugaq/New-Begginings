@@ -1,7 +1,7 @@
 package me.slimeyderp.newbeginnings.materials;
 
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

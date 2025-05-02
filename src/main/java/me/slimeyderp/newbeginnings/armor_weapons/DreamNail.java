@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.UUID;
 
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
@@ -15,9 +17,9 @@ import org.bukkit.potion.PotionEffectType;
 
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Objects.Category;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 
@@ -28,7 +30,7 @@ public class DreamNail extends NonDisenchantableSlimefunItem {
     private static HashMap<UUID, Integer> cooldownPlayer = new HashMap<>();
     private byte cooldownTimer;
 
-    public DreamNail(Category category, SlimefunItemStack item, RecipeType recipeType,
+    public DreamNail(ItemGroup category, SlimefunItemStack item, RecipeType recipeType,
                      ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
     }

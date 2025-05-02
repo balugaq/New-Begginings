@@ -3,7 +3,7 @@ package me.slimeyderp.newbeginnings.listeners;
 import io.github.thebusybiscuit.slimefun4.api.events.AncientAltarCraftEvent;
 import io.github.thebusybiscuit.slimefun4.api.events.GEOResourceGenerationEvent;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.slimeyderp.newbeginnings.NewBeginnings;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.mobs.Nightmare;
@@ -108,7 +108,7 @@ public class MainListener implements Listener {
         if (e.getEntity().getCustomName() != null &&
             e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
             e.getDrops().clear();
-            e.getDrops().add(new CustomItem((ExtraItemStack.NIGHTMARE_SHARD_STACK),
+            e.getDrops().add(new CustomItemStack((ExtraItemStack.NIGHTMARE_SHARD_STACK),
                 ThreadLocalRandom.current().nextInt(7) + 4));
             Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY + "A nightmare has been defeated!");
         }
