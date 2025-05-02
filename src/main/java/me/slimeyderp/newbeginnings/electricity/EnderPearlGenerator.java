@@ -1,12 +1,13 @@
 package me.slimeyderp.newbeginnings.electricity;
 
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AGenerator;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineFuel;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
 
 public class EnderPearlGenerator extends AGenerator {
 
@@ -35,7 +36,7 @@ public class EnderPearlGenerator extends AGenerator {
 
     @Override
     public String getInventoryTitle() {
-        return "&cEnder Pearl Generator";
+        return "&c末影珍珠发电机";
     }
 
 }
