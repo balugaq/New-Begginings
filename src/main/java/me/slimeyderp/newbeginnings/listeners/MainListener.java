@@ -105,14 +105,14 @@ public class MainListener implements Listener {
     @EventHandler
     public void onEntityDeath(EntityDeathEvent e) {
         if (e.getEntity().getCustomName() != null &&
-                e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
+                e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "梦魇")) {
             e.getDrops().clear();
             e.getDrops().add(new CustomItemStack((ExtraItemStack.NIGHTMARE_SHARD_STACK),
                     ThreadLocalRandom.current().nextInt(7) + 4));
-            Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY + "A nightmare has been defeated!");
+            Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY + "梦魇已被击败!");
         }
         if (e.getEntity().getCustomName() != null &&
-                e.getEntity().getCustomName().equals(ChatColor.WHITE + "PANDAAAAAAA!!!!!!")) {
+                e.getEntity().getCustomName().equals(ChatColor.WHITE + "熊猫猫猫猫猫猫!!!!!!")) {
             e.getDrops().clear();
         }
     }
@@ -122,7 +122,7 @@ public class MainListener implements Listener {
     public void onProyectileHitEvent(ProjectileHitEvent e) {
         if (e.getEntity() == null) return;
         if (e.getEntity().getType().equals(EntityType.WITHER_SKULL) && (e.getEntity().getShooter() instanceof Wither wither) &&
-                wither.getCustomName() != null && wither.getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
+                wither.getCustomName() != null && wither.getCustomName().equals(ChatColor.DARK_GRAY + "梦魇")) {
             if (e.getHitEntity() != null) {
                 for (Entity entity : e.getHitEntity().getWorld().getNearbyEntities(e.getHitEntity().getLocation(),
                         3, 3, 3, entity -> entity instanceof LivingEntity)) {
@@ -146,18 +146,18 @@ public class MainListener implements Listener {
     @EventHandler
     public void onEntityTarget(EntityTargetEvent e) {
         if ((e.getEntity().getCustomName() != null &&
-                (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare") ||
-                        e.getEntity().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")) &&
+                (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "梦魇") ||
+                        e.getEntity().getCustomName().equals(ChatColor.BLACK + "这是真正的噩梦")) &&
                 e.getTarget() != null && e.getTarget().getCustomName() != null &&
-                (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "Nightmare Followers") ||
-                        e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "Fiendish Followers")))
+                (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "梦魇随从") ||
+                        e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "恶魔随从")))
                 ||
                 (e.getEntity().getCustomName() != null &&
-                        (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "Nightmare Followers") ||
-                                e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "Fiendish Followers")) &&
+                        (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "梦魇随从") ||
+                                e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "恶魔随从")) &&
                         e.getTarget() != null && e.getTarget().getCustomName() != null &&
-                        (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare") ||
-                                e.getTarget().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")))) {
+                        (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "梦魇") ||
+                                e.getTarget().getCustomName().equals(ChatColor.BLACK + "这是真正的噩梦")))) {
             e.setCancelled(true); // Basically, makes the boss not target it's minions and viceversa.
         }
     }
@@ -176,10 +176,10 @@ public class MainListener implements Listener {
                 Sound.ENTITY_WITHER_AMBIENT, 1, 1);
         Nightmare.createNightmare(l.clone().add(0, 2, 0));
         Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY +
-                "A nightmare has spawned in this world");
+                "梦魇在这个世界中苏醒了!");
         Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY +
-                "This beast is imbued with incredible power");
+                "这只野兽充满了不可思议的力量!");
         Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY +
-                "Use Mythril Equippement to defeat him!");
+                "使用秘银装备击败它!");
     }
 }

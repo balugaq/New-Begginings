@@ -1,5 +1,8 @@
 package me.slimeyderp.newbeginnings.materials;
 
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.VanillaItem;
@@ -11,8 +14,6 @@ import me.slimeyderp.newbeginnings.armor_weapons.NonDisenchantableSlimefunItem;
 import me.slimeyderp.newbeginnings.armor_weapons.PandaBazooka;
 import me.slimeyderp.newbeginnings.electricity.EnderPearlGenerator;
 import me.slimeyderp.newbeginnings.tools.InfiniteFirework;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
 
 public class ExtraItems {
 
@@ -142,7 +143,7 @@ public class ExtraItems {
     public static final SlimefunItem RADIANT_SHARD = new SlimefunItem(
             NewCategory.CUSTOM_CATEGORY,
             ExtraItemStack.RADIANT_SHARD_STACK,
-            RecipeType.ORE_WASHER,
+            RecipeType.MAGIC_WORKBENCH,
             ExtraRecipes.RADIANT_SHARD_RECIPE
     );
     public static final NonDisenchantableSlimefunItem RADIANT_HELMET = new NonDisenchantableSlimefunItem(

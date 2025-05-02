@@ -1,11 +1,9 @@
 package me.slimeyderp.newbeginnings.armor_weapons;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import me.slimeyderp.newbeginnings.NewBeginnings;
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -19,9 +17,12 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import me.slimeyderp.newbeginnings.NewBeginnings;
 
 
 public class MythrilBlade extends NonDisenchantableSlimefunItem {
@@ -43,8 +44,8 @@ public class MythrilBlade extends NonDisenchantableSlimefunItem {
     private void onItemRightClick(PlayerRightClickEvent e) {
         if (playerBladeCooldown.containsKey(e.getPlayer().getUniqueId())) {
             int seconds = playerBladeCooldown.get(e.getPlayer().getUniqueId());
-            e.getPlayer().sendMessage(ChatColor.RED + "Can't use this ability yet! You need to wait " +
-                    seconds + " seconds.");
+            e.getPlayer().sendMessage(ChatColor.RED + "无法发动技能！你还需等待 " +
+                    seconds + " 秒。");
             e.cancel();
         } else {
             playerBladeCooldown.put(e.getPlayer().getUniqueId(), 10);

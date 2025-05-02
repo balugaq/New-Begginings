@@ -1,15 +1,16 @@
 package me.slimeyderp.newbeginnings;
 
+import org.bukkit.NamespacedKey;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.java.JavaPlugin;
+
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import me.slimeyderp.newbeginnings.listeners.MainListener;
 import me.slimeyderp.newbeginnings.materials.ExtraItemStack;
 import me.slimeyderp.newbeginnings.materials.ExtraItems;
 import me.slimeyderp.newbeginnings.resources.MythrilResource;
-import org.bukkit.NamespacedKey;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
@@ -244,7 +245,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
     private void registerResearches() {
         Research MYTHRIL_FORGING_RESEARCH = new Research(new NamespacedKey(this, "mythril_forging"),
-                875094722, "Mythril Forging", 32);
+                875094722, "秘银锻造", 32);
         MYTHRIL_FORGING_RESEARCH.addItems(
                 ExtraItems.MYTHRILNEW, ExtraItems.MYTHRIL_ORE, ExtraItems.MYTHRIL_BLADE, ExtraItems.MYTHRIL_HELMET,
                 ExtraItems.MYTHRIL_CHESTPLATE, ExtraItems.MYTHRIL_LEGGINGS, ExtraItems.MYTHRIL_BOOTS,
@@ -252,18 +253,18 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         MYTHRIL_FORGING_RESEARCH.register();
 
         Research INFINITE_FIREWORK_RESEARCH = new Research(new NamespacedKey(this, "infinite_firework_research"),
-                775043302, "Infinite Fireworks", 24);
+                775043302, "无尽的烟花", 24);
         INFINITE_FIREWORK_RESEARCH.addItems(ExtraItems.INFINITE_FIREWORK);
         INFINITE_FIREWORK_RESEARCH.register();
 
         Research NIGHTMARE_BEINGS_RESEARCH = new Research(new NamespacedKey(this, "nightmare_beings"),
-                949294955, "Nightmare Beings", 35);
+                949294955, "噩梦生物", 35);
         NIGHTMARE_BEINGS_RESEARCH.addItems(ExtraItems.RADIANT_SHARD, ExtraItems.NIGHTMARE_SHARD,
                 ExtraItems.NIGHTMARE_SUMMON);
         NIGHTMARE_BEINGS_RESEARCH.register();
 
         Research END_GAME_EQUIPPEMENT_RESEARCH = new Research(new NamespacedKey(this, "end_game_equippement"),
-                394842349, "End-Game Equippement", 38);
+                394842349, "最终的游戏装备", 38);
         END_GAME_EQUIPPEMENT_RESEARCH.addItems(
                 ExtraItems.DREAM_NAIL, ExtraItems.PANDA_BAZOOKA, ExtraItems.NIGHTMARE_BOOTS, ExtraItems.NIGHTMARE_LEGGINGS,
                 ExtraItems.NIGHTMARE_CHESTPLATE, ExtraItems.NIGHTMARE_HELMET, ExtraItems.RADIANT_BOOTS,
@@ -272,7 +273,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
 
         Research ENDER_PEARL_GENERATOR_RESEARCH = new Research(new NamespacedKey(this,
                 "ender_pearl_generator_research"),
-                437465549, "Ender-pearl Energy Generation", 24);
+                437465549, "末影珍珠发电机", 24);
         ENDER_PEARL_GENERATOR_RESEARCH.addItems(ExtraItems.ENDER_PEARL_GENERATOR_1, ExtraItems.ENDER_PEARL_GENERATOR_2);
         ENDER_PEARL_GENERATOR_RESEARCH.register();
     }
