@@ -11,7 +11,7 @@ public class ExtraRecipetellers {
     public static final RecipeType NIGHTMARE_SHARD_RECIPETYPE = new RecipeType(
             new NamespacedKey(NewBeginnings.getInstance(), "nightmare_recipe"),
             new SlimefunItemStack("NIGHTMARE_RECIPE", Material.WITHER_SKELETON_SKULL,
-                    "&fObtain this item by defeating the Nightmare")
+                    "&f通过击败梦魇Boss获得此物品")
     );
 
 }

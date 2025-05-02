@@ -264,7 +264,7 @@ public class NewBeginnings extends JavaPlugin implements SlimefunAddon {
         NIGHTMARE_BEINGS_RESEARCH.register();
 
         Research END_GAME_EQUIPPEMENT_RESEARCH = new Research(new NamespacedKey(this, "end_game_equippement"),
-                394842349, "最终的游戏装备", 38);
+                394842349, "终极游戏装备", 38);
         END_GAME_EQUIPPEMENT_RESEARCH.addItems(
                 ExtraItems.DREAM_NAIL, ExtraItems.PANDA_BAZOOKA, ExtraItems.NIGHTMARE_BOOTS, ExtraItems.NIGHTMARE_LEGGINGS,
                 ExtraItems.NIGHTMARE_CHESTPLATE, ExtraItems.NIGHTMARE_HELMET, ExtraItems.RADIANT_BOOTS,
