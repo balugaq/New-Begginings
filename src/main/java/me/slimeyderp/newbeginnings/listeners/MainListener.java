@@ -121,8 +121,8 @@ public class MainListener implements Listener {
     @EventHandler
     public void onProyectileHitEvent(ProjectileHitEvent e) {
         if (e.getEntity() == null) return;
-        if (e.getEntity().getType().equals(EntityType.WITHER_SKULL) &&
-                ((Wither) e.getEntity().getShooter()).getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
+        if (e.getEntity().getType().equals(EntityType.WITHER_SKULL) && (e.getEntity().getShooter() instanceof Wither wither) &&
+                wither.getCustomName() != null && wither.getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare")) {
             if (e.getHitEntity() != null) {
                 for (Entity entity : e.getHitEntity().getWorld().getNearbyEntities(e.getHitEntity().getLocation(),
                         3, 3, 3, entity -> entity instanceof LivingEntity)) {
@@ -148,14 +148,14 @@ public class MainListener implements Listener {
         if ((e.getEntity().getCustomName() != null &&
                 (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare") ||
                         e.getEntity().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")) &&
-                e.getTarget().getCustomName() != null &&
+                e.getTarget() != null && e.getTarget().getCustomName() != null &&
                 (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "Nightmare Followers") ||
                         e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "Fiendish Followers")))
                 ||
                 (e.getEntity().getCustomName() != null &&
                         (e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "Nightmare Followers") ||
                                 e.getEntity().getCustomName().equals(ChatColor.DARK_GRAY + "Fiendish Followers")) &&
-                        e.getTarget().getCustomName() != null &&
+                        e.getTarget() != null && e.getTarget().getCustomName() != null &&
                         (e.getTarget().getCustomName().equals(ChatColor.DARK_GRAY + "The Nightmare") ||
                                 e.getTarget().getCustomName().equals(ChatColor.BLACK + "The True Nightmare")))) {
             e.setCancelled(true); // Basically, makes the boss not target it's minions and viceversa.
